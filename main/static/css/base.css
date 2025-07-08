@@ -1,0 +1,101 @@
+
+:root {
+    --bg_color: whitesmoke;
+    --font_color: black;
+    --bg_img: url('../img/skyscraper.jpeg');
+}
+
+
+.dark_theme {
+  --bg_color: #171717;
+  --font_color: whitesmoke;
+  --bg_img: url('../img/skyscraper-dark.jpg');
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    color: var(--font_color);
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    background-image: var(--bg_img);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+header {
+    width: 80%;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 80px;
+}
+
+header h1 {
+    font-weight: 1000;
+    font-size: 40px;
+    width: 25%;
+    transition: all 0.2s 0.2s ease-in-out ;
+}
+
+header h1:hover {
+    color: red;
+    transform: scale(1.15) translateX(10px);
+}
+
+header .links {
+    height: 90px;
+    width: 50%;
+    background-color: var(--bg_color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    border-radius: 50px;
+    align-self: center;
+}
+
+header .links a {
+    text-decoration: none;
+    color: var(--font_color);
+    padding: 10px;
+    transition: all 0.2s 0.2s ease-in-out ;
+}
+
+header .links a:hover {
+    color: red;
+    transform: scale(1.15);
+}
+
+header .icons {
+    display: flex;
+    gap: 2px;
+    width: 25%;
+    justify-content: end;
+}
+
+header .icons a {
+    text-decoration: none;
+    color: var(--font_color);
+    padding: 10px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .icons .active {
+    border-radius: 50%;
+    background-color: whitesmoke;
+}
