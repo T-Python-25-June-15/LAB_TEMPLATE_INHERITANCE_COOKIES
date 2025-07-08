@@ -1,0 +1,63 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap" />
+
+    <title>{% block title %} {% endblock %}</title>
+</head>
+<body>
+    
+    <div class="wrap">
+        <nav>
+            <div class="Home"><a href=""><h6>HOME</h6></a></div>
+
+            <div class="bar">
+                <a href="#">Home</a>
+                <a href="#">Properties</a>
+                <a href="#">Services</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+
+            <div class="bar-icons">
+                <a href=""><span class="material-symbols-outlined">person</span></a>
+                <a href="">Sign up</a>
+                <a href=""><span class="material-symbols-outlined">sunny</span></a>
+                <a href=""><span class="material-symbols-outlined">bedtime</span></a>
+            </div>
+        </nav>
+
+        <main>
+
+            {% block main %}
+
+            {% endblock %}
+
+        </main>
+
+        <section>
+            {% block sec %}
+
+            {% endblock %}
+        </section>
+
+
+    </div>
+    
+
+    
+
+    
+
+
+
+</body>
+</html>

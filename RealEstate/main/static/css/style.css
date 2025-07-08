@@ -1,0 +1,184 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+
+}
+body {
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;    
+  overflow-x: hidden;
+    min-height: 120vh;
+    position: relative; 
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;    
+    background-image: url('/static/images/skyscraper.jpeg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100% auto;
+    padding: 6.5rem 12rem;
+    width: 100%;
+    max-height: 93vh;         
+    overflow: visible;    
+
+}
+
+
+
+
+nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+   justify-content: space-between;  
+   align-items: center;
+}
+
+
+.Home h6 {
+    font-family: 'Phudu', sans-serif;
+    font-size: 60px;
+   font-weight: 500;
+}
+
+.bar {
+    display: flex;
+    background-color: white;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 6rem;
+    border: 1rem solid white;
+    border-radius: 40px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+}
+
+
+.bar-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    
+}
+
+.bar-icons a:hover {
+  opacity: 0.8;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: 50vw;
+    gap: 0.5rem;
+}
+
+header h1 {
+    font-family: 'Phudu', sans-serif;
+    font-weight: 500;
+    font-size: 8vw;
+    padding-top: 3rem;
+}
+
+.phrase {
+    width: 700px;
+    font-size: 16px;
+    color: black;
+    font-weight: 600;
+}
+
+.explore-btn {
+    margin-top: 1rem;
+    background-color: black;
+    color: white;
+    padding: 0.5rem 2rem;
+    border: 1px solid black;
+    border-radius: 55px;
+    cursor: pointer;
+}
+
+
+section {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0 auto;
+    padding-top: 68px;
+ 
+}
+.bottom-bar {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 1px solid white;
+    padding: 1rem 2rem;
+    border: 1px solid white;
+    border-radius: 80px;
+    width: 45%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    position: absolute;    /* 🔥 makes it float over the wrap */
+    margin-top: 6rem;
+    left: 50%;
+    transform: translateX(-50%); /* center horizontally */
+}
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    gap: 7rem;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.icons a {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+
+  text-decoration: none;
+}
+
+.icons img {
+  width: 80px;   /* Adjust size as needed */
+  height: auto;
+  margin-bottom: 0.3rem; /* Space between icon and text */
+}
+
+.icons .ALL-icon {
+    color: rgb(8, 200, 8) ;
+}
+.icons .HOTEL-icon {
+}
+
+/* edit size  */
+.icons .PRO-icon {
+    
+}
+.icons .VILLA-icon {
+}

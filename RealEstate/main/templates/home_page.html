@@ -1,0 +1,34 @@
+
+{% extends 'base.html'%}
+{% load static %}
+{% block title%}
+Home
+{% endblock%}
+
+
+{% block main%}
+    <header>
+        <h1 class="head-pharse">Find your dreams</h1>
+    </header>
+
+    <div class="phrase">
+        <p>Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties.
+            Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties.</p>
+    </div>
+
+    <button class="explore-btn">Explore Properties</button>
+{% endblock %}
+
+{% block sec %}
+
+    <div class="bottom-bar">
+        <div class="icons">
+            <a class="ALL-icon" href=""> <img src="{% static 'images/house.png'%}" alt="">ALL</a>
+            <a class="PRO-icon" href=""> <img src="{% static 'images/PRO.png'%}" alt="" >PROPERTIES</a>
+            <a class="HOTEL-icon" href=""> <img src="{% static 'images/HOTEL.png'%}" alt="" >HOTEL</a>
+            <a class="VILLA-icon" href=""> <img src="{% static 'images/VILLA.png'%}" alt="" >VILLA</a>
+        </div>
+        
+    </div>
+
+{% endblock %}
