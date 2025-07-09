@@ -1,0 +1,30 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block title%}
+Properties
+{% endblock%}
+
+
+{% block wrap_class %}
+no-background
+{% endblock %}
+
+{% block main %}
+<div class="pro-page">
+    <header><h3>OUR PROPERTIES</h3></header>
+
+    <div class="property-list">
+    {% for property in properties %}
+        <div class="property-item">
+            <img src="{% static 'images/'|add:property.image %}" alt="{{ property.title }}">
+            <div class="property-info">
+                <h5>{{ property.title|upper }}</h5>
+                <a href="#" class="more-btn">more</a>
+            </div>
+        </div>
+    {% endfor %}
+    </div>      
+</div>
+    
+{% endblock %}
+

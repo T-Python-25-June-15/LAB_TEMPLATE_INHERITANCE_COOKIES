@@ -1,0 +1,48 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block title%}
+Contact Us
+{% endblock%}
+
+
+{% block wrap_class %}
+contact_background
+{% endblock %}
+
+
+{% block main %}
+<div class="contact-page">
+    <header><h3>CONTACT US</h3></header>
+
+    <div class="contact-content">
+    <!-- Left side: contact info -->
+    <div class="contact-info">
+        <div class="info">Telephone: <a href="tel:+966537348135">+966 537348135</a></div>
+        <div class="info">Email: <a href="mailto:alsofayan10@gmail.com">alsofayan10@gmail.com</a></div>
+        <div class="info">Address:</div>
+        <div class="info-address">
+            ANAS BIN MALIK, RIYADH<br>
+            BUILDING W-112<br>
+            SAUDI ARABIA
+        </div>
+        </div>
+
+        <!-- Right side: map -->
+        <div class="contact-map">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=..." 
+            width="100%" 
+            height="350" 
+            style="border:0; border-radius: 12px;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        </div>
+  </div>
+
+
+          
+</div>
+    
+{% endblock %}
