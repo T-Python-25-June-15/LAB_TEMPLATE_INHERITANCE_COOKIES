@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpRequest, HttpResponse
 # Create your views here.
 
@@ -18,3 +18,16 @@ def properties_page(request:HttpRequest):
 
 def contact_page(request:HttpRequest):
     return render(request, "contact.html")
+
+
+
+def dark_mood_view(request:HttpRequest):
+    response = redirect("main:home_page")
+    response.set_cookie("mood", "dark")
+    return response
+
+
+def light_mood_view(request:HttpRequest):
+    response = redirect("main:home_page")
+    response.set_cookie("mood", "light", max_age= - 3600)
+    return response

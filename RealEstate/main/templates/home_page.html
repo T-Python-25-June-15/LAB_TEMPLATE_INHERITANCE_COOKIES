@@ -16,7 +16,7 @@ Home
                 Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties.</p>
         </div>
 
-        <button class="explore-btn">Explore Properties</button>
+        <a href="{% url 'main:properties_page'%}"><button class="explore-btn">Explore Properties</button></a>
         </div>
 
     {% endblock %}
@@ -25,11 +25,12 @@ Home
 
         <div class="bottom-bar">
             <div class="icons">
-                <a class="ALL-icon" href=""> <img src="{% static 'images/house.png'%}" alt="">ALL</a>
-                <a class="PRO-icon" href=""> <img src="{% static 'images/PRO.png'%}" alt="" >PROPERTIES</a>
-                <a class="HOTEL-icon" href=""> <img src="{% static 'images/HOTEL.png'%}" alt="" >HOTEL</a>
-                <a class="VILLA-icon" href=""> <img src="{% static 'images/VILLA.png'%}" alt="" >VILLA</a>
+                <a class="ALL-icon" href=""> <span>ALL</span></a>
+                <a class="PRO-icon" href=""> <span>PROPERTIES</span></a>
+                <a class="HOTEL-icon" href=""><span>HOTEL</span></a>
+                <a class="VILLA-icon" href=""><span>VILLA</span></a>
             </div>
+            
             
         </div>
 
