@@ -1,0 +1,38 @@
+from django.shortcuts import render
+
+# Create your views here.
+
+def home_view(request):
+    
+    
+    return render(request, "main/home.html", )
+
+
+def contact_view(request):
+    
+    
+    return render(request, "main/contact.html", )
+
+
+# def properties_view(request):
+    
+    
+#     return render(request, "main/properties.html", )
+
+from django.shortcuts import render
+
+def properties_view(request):
+    properties = [
+        {"title": "Villa Modern in Malqa", "image": "villa1.jpg"},
+        {"title": "Great Home for You in Rimal", "image": "villa2.jpg"},
+        {"title": "Villa with 8 Bedrooms in Swedey", "image": "villa3.jpg"},
+        {"title": "Amazing Villa in Hitten", "image": "villa4.jpg"},
+    ]
+    context = {
+        'properties': properties 
+    }
+    return render(request, 'main/properties.html', context)
+def base_view(request):
+    
+    
+    return render(request, "main/base.html", )

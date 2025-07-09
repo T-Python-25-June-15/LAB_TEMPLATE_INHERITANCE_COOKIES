@@ -1,0 +1,68 @@
+
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Our Properties{% endblock %}
+
+{% block content %}
+  <div class="property-container">
+    <h2>OUR PROPERTIES</h2>
+
+    <div class="property-grid">
+      {% for property in properties %}
+        <div class="property-card">
+          <img src="{% static 'images/'|add:property.image %}" alt="{{ property.title }}">
+          <div class="property-details">
+            <h3>{{ property.title|upper }}</h3>
+            <a href="#" class="more-btn">more</a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}
+
+
+<!-- {% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Properties</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+  <div class="property-container">
+    <h2>OUR PROPERTIES</h2>
+
+    <div class="property-grid">
+      <div class="property-card">
+        <img src="{% static 'images/villa1.jpg' %}" alt="Villa Modern in Malqa">
+        <div class="property-details">
+          <h3>VILLA MODERN IN MALQA</h3>
+          <a href="#" class="more-btn">more</a>
+        </div>
+      </div>
+
+      <div class="property-card">
+        <img src="{% static 'images/villa2.jpg' %}" alt="Great Home for You in Rimal">
+        <div class="property-details">
+          <h3>GREAT HOME FOR YOU IN RIMAL</h3>
+          <a href="#" class="more-btn">more</a>
+        </div>
+      </div>
+
+      <div class="property-card">
+        <img src="{% static 'images/villa3.jpg' %}" alt="Villa with 8 Bedrooms in Swedey">
+        <div class="property-details">
+          <h3>VILLA WITH 8 BEDROOMS IN SWEDEY</h3>
+          <a href="#" class="more-btn">more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html> -->

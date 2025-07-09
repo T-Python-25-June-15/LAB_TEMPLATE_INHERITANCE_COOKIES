@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}Real Estate{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body class="{% block body_class %}{% endblock %}">
+
+  <header class="header">
+    <div class="logo">HOME</div>
+    <nav class="nav-menu">
+      <a href="{% url 'main:home_view' %}">Home</a>
+      <a href="{% url 'main:properties_view' %}">Properties</a>
+      <a href="#">Services</a>
+      <a href="#">About</a>
+      <a href="{% url 'main:contact_view' %}">Contact</a>
+    </nav>
+    <div class="header-right">
+      <span class="icon">👤</span>
+      <a href="#" class="signup">Sign up</a>
+      <span class="icon">🌞</span>
+      <span class="icon">🌙</span>
+    </div>
+  </header>
+
+  <main>
+    {% block content %}
+    {% endblock %}
+  </main>
+
+</body>
+</html>
