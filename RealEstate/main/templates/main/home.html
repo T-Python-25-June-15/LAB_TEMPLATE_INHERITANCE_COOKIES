@@ -1,0 +1,18 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Home - RealEstate{% endblock %}
+
+{% block content %}
+<section class="hero-section">
+  <div class="hero-overlay">
+    <div class="hero-text">
+      <h1>FIND YOUR <br> DREAMS</h1>
+      <p>
+        Our catalog will surprise you. Rather, discover an unprecedented offer of luxury properties.<br />
+        Our catalog will surprise you. Rather, discover an unprecedented offer of luxury properties.
+      </p>
+      <a href="{% url 'main:properties' %}" class="hero-btn">Explore Properties</a>
+    </div>
+  </div>
+</section>
+{% endblock %}
