@@ -1,0 +1,150 @@
+* {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+}
+
+header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    right: 6rem;
+    left: 6rem;
+    top: 3rem;
+}
+
+nav {
+    display: flex;
+    gap: 3rem;
+    padding: 1.7rem 8rem;
+    background-color: white;
+    border-radius: 5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    transition: .6s;
+}
+
+nav a:hover {
+    text-decoration: none;
+    color: red;
+    font-size: 18px;
+}
+
+.settings {
+    display: flex;
+    gap: 1rem;
+}
+
+.settings button,.settings span {
+    border: none;
+    background: none;
+    transition: .5s;
+}
+.settings button:hover,.settings span:hover {
+    cursor: pointer;
+    color: red;
+    font-size: 30px;
+}
+
+.container {
+    background-image: url(../images/skyscraper.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 12rem 5.5rem 4rem 5.5rem;
+}
+.container h1 {
+    font-size: 7rem;
+}
+
+.btn {
+    padding: 8px 17px;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 1rem;
+}
+
+footer {
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    height: 2rem;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    background-color: white;
+    border-radius: 4rem;
+    padding: 1rem 2rem;
+    margin: 2rem 22rem;
+    position: relative;
+    bottom: 6rem;
+    box-shadow: 0 0 10px 1px rgb(220, 220, 220);
+}
+
+.content {
+    text-align: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.content span{
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 3rem;
+}
+
+.content h5{
+    text-align: center;
+}
+
+
+.green {
+    background-color: #c6eabf;
+    color: #2eb910;
+}
+
+.purple {
+    background-color: #f1beed;
+    color: #c80dc0;
+}
+
+.orange {
+    background-color: #ebd5bc;
+    color: #b8770d;
+}
+
+.blue {
+    background-color: #b8bcef;
+    color: #171bc6;
+}
+
+.hgreen {
+    color: #2eb910;
+}
+
+.hpurple {
+    color: #c80dc0;
+}
+
+.horange {
+    color: #b8770d;
+}
+
+.hblue {
+    color: #171bc6;
+}
+
+h4 {
+    padding-top: .5rem;
+}

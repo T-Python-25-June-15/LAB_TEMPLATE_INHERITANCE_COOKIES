@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial
+-scale=1">
+<title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="/static/css/style.css" class="css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Home</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Properties</a>
+            <a href="#">Services</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            
+        </nav>
+        <div class="settings">
+            <button><span class="material-symbols-outlined">person</span></button>
+            <button><p>sign in</p></button>
+            <button><span class="material-symbols-outlined">clear_day</span></button>
+            <button><span class="material-symbols-outlined">bedtime</span></button>
+        </div>
+    </header>
+
+{% block content %}
+{% endblock %}
+
+    <footer>
+        <p>
+            All copyright by nawaf-almalki
+        </p>
+    </footer>
+</body>
+</html>
