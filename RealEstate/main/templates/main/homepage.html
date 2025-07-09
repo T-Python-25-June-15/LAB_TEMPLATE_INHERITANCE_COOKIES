@@ -1,0 +1,34 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block content %}
+<section class="home-main"
+  style="background-image: url('{% if darkmode == 'true' %}{% static 'images/skyscraper-dark.jpg' %}{% else %}{% static 'images/skyscraper.jpeg' %}{% endif %}');">
+  <div class="home-text">
+    <h1 class="fade-in">FIND YOUR</h1>
+    <h1 class="fade-in">DREAMS</h1>
+    <p>Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties.</p>
+    <a href="{% url 'main:prop_view' %}" button class="cta-button">Explore Properties</button></a>
+  </div>
+</section>
+
+<section class="home-footer {% if request.COOKIES.darkmode == 'true' %}dark-mode{% endif %}">
+  <div class="card green">
+    <span class="material-icons">home</span>
+    <h5>ALL</h5>
+  </div>
+  <div class="card orange">
+    <span class="material-icons">apartment</span>
+    <h5>PROPERTIES</h5>
+  </div>
+  <div class="card pink">
+    <span class="material-icons">hotel</span>
+    <h5>HOTEL</h5>
+  </div>
+  <div class="card blue">
+    <span class="material-icons">villa</span>
+    <h5>VILLA</h5>
+  </div>
+</section>
+
+{% endblock %}
