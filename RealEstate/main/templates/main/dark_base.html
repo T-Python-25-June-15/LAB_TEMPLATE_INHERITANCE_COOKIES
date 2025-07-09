@@ -8,18 +8,18 @@
   <title>{% block title %}Real Estate{% endblock %}</title>
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
-<body class="{% block body_class %}{% endblock %}">
+<body class="{% block body_class %}body-dark{% endblock %}">
 
-  <header class="header">
-    <div class="logo">HOME</div>
-    <nav class="nav-menu">
-      <a href="{% url 'main:home_view' %}">Home</a>
+  <header class="header-dark">
+    <div class="logo-dark">HOME</div>
+    <nav class="nav-menu-dark">
+      <a href="{% url 'main:home_dark_view' %}">Home</a>
       <a href="{% url 'main:properties_view' %}">Properties</a>
       <a href="#">Services</a>
       <a href="#">About</a>
       <a href="{% url 'main:contact_view' %}">Contact</a>
     </nav>
-    <div class="header-right">
+    <div class="header-right-dark">
       <a class="icon">👤</a>
       <a href="#" class="signup">Sign up</a>
       <a class="icon" href="{% url 'main:home_view' %}">🌞</a>

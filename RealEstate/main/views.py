@@ -13,13 +13,16 @@ def contact_view(request):
     
     return render(request, "main/contact.html", )
 
-
-# def properties_view(request):
+def home_dark_view(request):
     
     
-#     return render(request, "main/properties.html", )
+    return render(request, "main/home_dark.html", )
 
-from django.shortcuts import render
+
+def dark_base_view(request):
+    
+    
+    return render(request, "main/dark_base.html", )
 
 def properties_view(request):
     properties = [

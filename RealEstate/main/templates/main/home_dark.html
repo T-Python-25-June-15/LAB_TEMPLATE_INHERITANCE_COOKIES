@@ -1,9 +1,9 @@
-{% extends 'main/base.html' %}
+{% extends 'main/dark_base.html' %}
 
 {% block title %}Home{% endblock %}
 
 {% block content %}
-  <div class="main-section">
+  <div class="main-section-dark">
   <h1 class="fade-in">FIND YOUR <br> DREAMS</h1>
     <p>
       Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties.
@@ -12,27 +12,27 @@
     <a href="#" class="btn">Explore Properties</a>
   </div>
 
-  <div class="filter-bar">
-    <a href="">
-    <div class="filter-option">
+  <div class="filter-bar-dark">
+    <a class="text-decoration-dark" href="">
+    <div class="filter-option-dark">
       <div class="icon">🏠</div>
       <p>ALL</p>
     </div>
     </a>
-    <a href="{% url 'main:properties_view' %}">
-    <div class="filter-option">
+    <a href="{% url 'main:properties_view' %} " class="text-decoration-dark">
+    <div class="filter-option-dark">
       <div class="icon">🏢</div>
       <p>PROPERTIES</p>
     </div>
     </a>
-       <a href="">
-    <div class="filter-option">
+    <a class="text-decoration-dark" href="">
+    <div class="filter-option-dark">
       <div class="icon">🛏️</div>
       <p>HOTEL</p>
     </div>
     </a>
-    <a href="">
-    <div class="filter-option">
+    <a class="text-decoration-dark" href="">
+    <div class="filter-option-dark">
       <div class="icon">🏡</div>
       <p>VILLA</p>
     </div>
