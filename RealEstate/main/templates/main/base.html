@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" data-theme="{{ request.COOKIES.theme|default:'light' }}">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}RealEstate{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}?v=999" />
+  <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@500&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Font Awesome -->
+</head>
+<body>
+
+  <header class="main-header">
+    <div class="left-section">
+        <a href="{% url 'main:home' %}" class="logo">HOME</a>
+    </div>
+
+    <div class="navbar-wrapper">
+      <nav class="navbar">
+        <a href="{% url 'main:home' %}">Home</a>
+        <a href="{% url 'main:properties' %}">Properties</a>
+        <a href="#">Services</a>
+        <a href="#">About</a>
+        <a href="{% url 'main:contact' %}">Contact</a>
+      </nav>
+    </div>
+
+    <div class="right-section redesigned">
+        <!-- Sign up with icon -->
+        <div class="auth">
+          <img src="{% static 'icons/user.svg' %}" alt="User" class="auth-icon">
+          <a href="#" class="signup">Sign up</a>
+        </div>
+      
+        <!-- Theme mode toggle -->
+        <div class="theme-toggle">
+            <a href="{% url 'main:toggle-theme' %}" class="theme-icon light {% if request.COOKIES.theme == 'light' or not request.COOKIES.theme %}active{% endif %}">
+              <img src="{% static 'icons/sun.svg' %}" alt="Light mode" />
+            </a>
+            <a href="{% url 'main:toggle-theme' %}" class="theme-icon dark {% if request.COOKIES.theme == 'dark' %}active{% endif %}">
+              <img src="{% static 'icons/moon.svg' %}" alt="Dark mode" />
+            </a>
+          </div>
+      </div>
+      
+      
+      
+  </header>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- Footer Pills Section -->
+  <footer class="footer-pills">
+    <div class="pill-footer-container">
+      <div class="pill-item">
+        <div class="pill-icon" style="background-color: #A1E9A1;">
+          <img src="{% static 'icons/home.svg' %}" alt="All" />
+        </div>
+        <span class="pill-label" style="color: green;">ALL</span>
+      </div>
+      <div class="pill-item">
+        <div class="pill-icon" style="background-color: #E9C69D;">
+          <img src="{% static 'icons/properties.svg' %}" alt="Properties" />
+        </div>
+        <span class="pill-label" style="color: #C57B00;">PROPERTIES</span>
+      </div>
+      <div class="pill-item">
+        <div class="pill-icon" style="background-color: #F1A8E4;">
+          <img src="{% static 'icons/hotel.svg' %}" alt="Hotel" />
+        </div>
+        <span class="pill-label" style="color: #D21AA8;">HOTEL</span>
+      </div>
+      <div class="pill-item">
+        <div class="pill-icon" style="background-color: #B8C7FF;">
+          <img src="{% static 'icons/villa.svg' %}" alt="Villa" />
+        </div>
+        <span class="pill-label" style="color: #2048B8;">VILLA</span>
+      </div>
+    </div>
+  </footer>
+  
+
+</body>
+</html>
+

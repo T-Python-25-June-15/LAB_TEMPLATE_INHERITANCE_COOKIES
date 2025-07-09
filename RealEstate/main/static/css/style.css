@@ -1,0 +1,495 @@
+/* Default Light Theme */
+:root {
+    --bg-color: #f0f0f0;
+    --text-color: black;
+    --card-bg: white;
+    --pill-shadow: rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Dark Theme */
+  html[data-theme='dark'] {
+    --bg-color: #1e1e1e;
+    --text-color: #ffffff;
+    --card-bg: #2c2c2c;
+    --pill-shadow: rgba(255, 255, 255, 0.1);
+  }
+  
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+  
+  .property-card,
+  .pill-footer-container {
+    background-color: var(--card-bg);
+    box-shadow: 0 10px 30px var(--pill-shadow);
+  }
+  
+  a, .signup, .pill-label {
+    color: var(--text-color);
+  }
+  
+
+  body {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+  }
+
+.main-header {
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 50px;
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: 'Phudu', sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.left-section a:hover {
+    color: #e33131;
+}
+  
+
+.navbar-wrapper {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar {
+    background-color: white;
+    border-radius: 50px;
+    padding: 30px 90px;
+    display: flex;
+    gap: 70px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #e33131;
+}
+
+.right-section.redesigned {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    font-size: 16px;
+  }
+  
+  .auth {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .auth-icon {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .signup {
+    text-decoration: none;
+    font-weight: 500;
+    color: black;
+    cursor: pointer;
+  }
+  
+  /* Theme toggle section */
+  .theme-toggle {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .theme-icon {
+    width: 32px;
+    height: 32px;
+    padding: 5px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .theme-icon img {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .theme-icon.active {
+    background-color: white;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+  }
+
+
+.theme-icon {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f1f1f1;
+    margin-top: 60px;
+}
+
+.footer-pills {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    padding: 0;
+}
+
+
+.pill-footer-container {
+    background-color: white;
+    border-radius: 90px;
+    padding: 30px 100px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    display: flex;
+    gap: 100px;
+    align-items: center;
+    pointer-events: auto;
+}
+
+
+.pill-item {
+    text-align: center;
+}
+
+.pill-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 8px;
+    font-size: 20px;
+    color: white;
+}
+
+.pill-label {
+    font-weight: bold;
+    font-size: 14px;
+    display: block;
+}
+
+.pill-icon img {
+    width: 22px;
+    height: 22px;
+}
+
+/*======== HOME ========*/
+
+/*======== HERO SECTION ========*/
+
+.hero-section {
+    height: 100vh;
+    background-image: url('/static/images/hero-light.jpeg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-left: 8%;
+}
+
+html[data-theme='dark'] .hero-section {
+    background-image: url('/static/images/hero-dark.jpg');
+}
+
+
+
+.hero-overlay {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 20px;
+    width: 100%;
+}
+
+.hero-text {
+    max-width: 900px;
+    color: black;
+    text-align: left;
+}
+
+.hero-text h1 {
+    font-size: 140px;
+    margin: 0;
+    font-weight: 900;
+}
+
+.hero-text p {
+    font-size: 16px;
+    margin: 20px 0;
+    line-height: 1.5;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: black;
+    color: white;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.hero-btn:hover {
+    background-color: #333;
+}
+
+/*======== Property ========*/
+
+/*======== properties section ========*/
+
+.properties-section {
+    padding: 250px 3%;
+    background-color: #e3dfdba7;
+}
+
+.properties-section h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.property-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.property-card {
+    background-color: rgba(172, 172, 172, 0.203);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.property-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-details {
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-details h3 {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.more-btn {
+    background-color: black;
+    color: white;
+    padding: 8px 16px;
+    font-size: 13px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+/*======== CONTACT VIEW ========*/
+
+/*======== contact hero ========*/
+
+.contact-hero {
+    height: 100vh;
+    background-image: url('/static/images/contact-light.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 5%;
+}
+
+html[data-theme='dark'] .contact-hero {
+    background-image: url('/static/images/hero-dark.jpg');
+}
+
+
+.contact-overlay {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1500px;
+    gap: 40px;
+}
+
+.contact-left {
+    color: black;
+    max-width: 1000px;
+}
+
+.contact-left h1 {
+    font-size: 35px;
+    margin-bottom: 50px;
+    font-weight: normal;
+}
+
+.contact-left p {
+    font-size: 20px;
+}
+
+.contact-left a {
+    color: blue;
+    text-decoration: none;
+}
+
+.contact-right {
+    flex: 1;
+    max-width: 900px;
+}
+
+/*======== Base Responsive Rules ========*/
+
+/* Images scale nicely */
+img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Ensure hero text scales */
+  .hero-text h1,
+  .contact-left h1 {
+    font-size: clamp(24px, 6vw, 64px);
+  }
+  
+  .hero-text p,
+  .contact-left p {
+    font-size: clamp(14px, 3vw, 18px);
+  }
+  
+  .more-btn,
+  .signup {
+    font-size: clamp(12px, 3vw, 16px);
+  }
+
+  .main-header,
+.footer-pills .pill-footer-container {
+  flex-wrap: wrap;
+  gap: 60px;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-overlay,
+.contact-overlay {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .hero-overlay,
+  .contact-overlay {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.right-section.redesigned {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+  }
+  
+
+/*======== Animation Keyframes  ========*/
+
+* {
+    transition: all 0.3s ease;
+  }  
+
+@keyframes fadeInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Apply to logo */
+  .left-section {
+    animation: fadeInLeft 1s ease-in-out forwards;
+    opacity: 0;
+  }
+  
+  /* Apply to hero h1 and p */
+  .hero-text h1 {
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+  }
+  
+  .hero-text p {
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 0.6s;
+    opacity: 0;
+  }
+  
+
+  
