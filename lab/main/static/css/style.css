@@ -1,0 +1,281 @@
+
+
+body{
+    padding: 2.5rem 8rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Phudu', sans-serif;
+
+}
+
+p, .signup, nav, .villa-card-button, .contactus-information{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 550;
+    font-size: 0.9rem;
+}
+
+h1{
+    font-size: 3rem;
+    font-weight: normal;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+.center-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 4rem;
+    padding: 1.6rem 5rem;
+    border-radius: 3rem;
+
+}
+.center-nav a{
+    text-decoration: none;
+    font-size: 90%;
+    transition: all 0.3s ease;
+
+}
+.center-nav a:hover {
+    transform: scale(1.1);
+    padding:0.1rem;
+    color: #d32f2f;
+  }
+
+.right-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    gap:0.5rem;
+}
+
+.signup{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:0.5rem;
+}
+
+
+
+.left-main{
+    width:50%;
+    padding: 0;
+}
+
+@keyframes zoomInFromBack {
+    0% {
+      transform: scale(0.1) translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1) translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .main-left-header {
+    font-size: 9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: 'Phudu', sans-serif;
+    animation: zoomInFromBack 1s ease-out forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+  }
+  
+
+
+.main-left-button{
+    background-color: black;
+    padding:0.5rem 2rem;
+    margin:0.4rem;
+    color:white;
+    border-radius: 3rem;
+}
+
+.menu{
+    display: flex;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: row;
+    justify-content: space-around;
+    gap:1rem;
+    padding: 1.5rem 8rem;
+    border-radius: 4rem;
+    align-items: center;
+    align-content: center;
+    width: 29%;
+    font-size: 120%;
+}
+
+.menu-item1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #29B70D;
+    transition: transform 0.3s ease;
+
+}
+.menu-item1:hover {
+    transform: scale(1.1);
+  }
+
+.menu-item1 .menu-icon{
+    background-color: #C5EABE;
+    font-size: 2rem;
+    color:#29B70D;
+    padding: 0.7rem;
+    border-radius: 2.2rem;
+}
+
+.menu-item2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color :#B7770D;
+    transition: transform 0.3s ease;
+
+}
+.menu-item2:hover {
+    transform: scale(1.1);
+  }
+
+.menu-item2 .menu-icon{
+    background-color: #EBD5BC;
+    font-size: 2rem;
+    color:#B7770D;
+    padding: 0.7rem;
+    border-radius: 2.2rem;
+}
+.menu-item3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #C80BC0;
+    transition: transform 0.3s ease;
+
+}
+.menu-item3:hover {
+    transform: scale(1.1);
+  }
+.menu-item3 .menu-icon{
+    background-color: #F1BEED;
+    font-size: 2rem;
+    color:#C80BC0;
+    padding: 0.7rem;
+    border-radius: 2.2rem;
+}
+.menu-item4{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:#171BC4;
+    transition: transform 0.3s ease;
+
+}
+.menu-item4:hover {
+    transform: scale(1.1);
+  }
+
+.menu-item4 .menu-icon{
+    background-color: #B8BCEF;
+    font-size: 2rem;
+    color:#171BC4;
+    padding: 0.7rem;
+    border-radius: 2.2rem;
+}
+
+
+.left-nav-header{
+    transition: transform 0.3s ease;
+
+}
+.left-nav-header:hover {
+    transform: scale(1.1);
+    color:red;
+  }
+
+.material-symbols-outlined{
+    margin:1px;
+    padding:1px;
+}
+.active{
+    padding:0.1rem;
+    border-radius: 3rem;
+}
+
+.villas-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; 
+    justify-content: flex-start; 
+    margin-top: 1rem;
+
+  }
+
+.villa-card{
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 2rem;
+    
+}
+.villa-card-image{
+    border-radius: 32px 32px 0 0;
+    object-fit:cover;
+    width: 100%;      
+    height: 20rem; 
+}
+
+.villa-card-details{
+    padding:1.5rem 1.5rem 1rem 1.5rem;
+}
+.villa-card-title{
+    font-size: 2.9vh;
+    font-weight: 400;
+}
+
+.villa-card-button {
+    color: white;
+    margin: 0.5rem;
+    margin-left: auto; 
+    border-radius: 2rem;
+    padding: 0.4rem;
+    text-align: center;
+    text-transform:lowercase;
+    width: 20%;
+}
+
+
+.contactusContainer{
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.contactus-information span{
+    font-weight: 400;
+    font-size: 3vh;
+}
+.map iframe{
+    border-radius: 32px;
+    width:105vh;
+}
