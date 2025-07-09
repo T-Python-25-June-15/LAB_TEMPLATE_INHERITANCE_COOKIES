@@ -12,45 +12,18 @@ Properties - Page
 
   <div class="card_container">
 
-    
-    <div class="card">
-      <img src="/static/images/villa1.jpg" alt="">
-      <h2>villa modern in malqa</h2>
-      <div class="card-footer">
-        <button class="btn"><span>More</span></button>
-      </div>
-    </div>
-    
-    
-    <div class="card">
-      <img src="/static/images/villa2.jpg" alt="">
-      <h2>great home for you in rimal</h2>
-      <div class="card-footer">
-        <button class="btn"><span>More</span></button>
-      </div>
-    </div>
-    
-    
-    <div class="card">
-      <img src="/static/images/villa3.jpg" alt="">
-      <h2>villa with 8 bedrooms in swedey</h2>
-      <div class="card-footer">
-        <button class="btn"><span>More</span></button>
-      </div>
-    </div>
-    
-    <div class="card">
-      <img src="/static/images/villa4.jpg" alt="">
-      <h2>great house in almalyah</h2>
-      <div class="card-footer">
-        <button class="btn"><span>More</span></button>
-      </div>
-    </div>
 
+    {% for property in properties %}
+    <div class="card">
+      <img src="/static/images/{{property.image}}" alt="">
+      <h2>{{property.title}}</h2>
+      <div class="card-footer">
+        <button class="btn"><span>More</span></button>
+      </div>
+    </div>
+    {%endfor%}
     
   </div>
-
-
 </div>
 
 
