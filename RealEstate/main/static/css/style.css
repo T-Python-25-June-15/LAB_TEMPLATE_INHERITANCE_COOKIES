@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Phudu:wght@300..900&display=swap');
+
+* {  
+    font-family: "Open Sans", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #ebeae9;
+
+}
+
+.big-container {
+    flex: 1;
+}
+
+.dark-mode { 
+    background-color: #323232;
+}
+
+.navigation-bar{
+    height: 9vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 5.4rem 3.4rem 3.4rem 3.4rem;
+    position: sticky;
+    top: 0;
+}
+
+.nav-logo { 
+    flex: 0.25;
+    place-content: center;
+    text-align: center;
+    transition: all .5s;
+}
+
+
+.nav-logo {
+    color: black;
+}
+.dark-mode .nav-logo {
+    color: white;
+}
+
+
+.nav-logo span {
+    font-size: 3rem;
+    font-weight: 450;
+    font-family: "Phudu", sans-serif;
+    
+}
+
+.nav-logo:hover {
+    transform : scale(1.25);
+    color:red
+}
+
+
+.nav-list{ 
+    flex:0.50;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    font-weight: 600;
+}
+
+.nav-list ul{ 
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    width: 85%;
+    padding: 1.5rem;
+    border-radius: 35px;
+    /*height: -webkit-fill-available;*/
+}
+
+.dark-mode .nav-list ul {
+    background-color: #282828;
+}
+.nav-list ul {
+    background-color: white;
+}
+
+.nav-list ul li{ 
+    align-content: center;
+    transition: all .5s;
+}
+
+.nav-list ul li:hover { 
+    transform : scale(1.25);
+}
+.nav-list ul li a:hover, .dark-mode .nav-list ul li a:hover { 
+    color:red
+}
+
+.nav-list ul li a, .dark-mode  .nav-list ul li a{
+    text-decoration: none;
+}
+
+.nav-list ul li a { 
+    color: black;
+}
+.dark-mode  .nav-list ul li a { 
+    color: white;
+}
+
+.nav-options { 
+    flex: 0.25;
+    place-content: center;
+}
+
+.nav-options .nav-opt { 
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    align-items: center;
+    
+}
+
+.modes-container a span {
+    border-radius: 30px;
+    padding: 0.4rem;
+    transition: all .5s;
+}
+
+.modes-container a .mode-active { 
+    background-color: white;
+}
+.dark-mode .modes-container a .mode-active { 
+    background-color: #282828;
+    
+}
+
+.nav-options .nav-opt a span{
+    color:black
+}
+.dark-mode .nav-options a span{
+    color:white
+}
+.nav-options .nav-opt a span:hover, .dark-mode .nav-options .nav-opt a span:hover{
+    color:red
+}
+
+
+.content-container{
+    width: 80%;
+    justify-self: center;
+}
+
+.content-page-title h1{ 
+    font-family: "Phudu", sans-serif;
+    font-weight: 400;
+}
+
+.content-page-title h1{
+    color:black;
+}
+
+.dark-mode .content-page-title h1 {
+    color: white
+}
+
+.background-image-container {
+    height: 95vh;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    z-index: -1;
+}
+
+.background-image-container img {
+    width: inherit;
+    height: inherit;
+}
+
+.footer { 
+    width:100%;
+    height:60px;   /* Height of the footer */
+    background-color: black;
+    color:white;
+    margin-top: 5rem;
+    padding: 1rem;
+    justify-items: center;
+}
+
+/*Home Page*/
+.home-title-container, .description-container{
+    width: 50%;
+    /*margin: 0 4rem;*/
+}
+.dark-mode .description-container{color: white}
+
+.home-title-container span{
+    font-family: "Phudu", sans-serif;
+    font-size: 11rem;
+    font-weight: 450;
+    letter-spacing: -0.4rem;
+    line-height: 12rem;
+}
+
+.home-title-container{
+    animation: moving 1s ease forwards;
+}
+
+@keyframes moving {
+    from { transform: scale(25%) translateX(-25vw); }
+    to { transform: scale(100%) translateX(0); }
+}
+
+.home-title-container span{
+    color:black
+}
+.dark-mode .home-title-container span{
+    color: white;
+}
+
+.description-container{
+    margin: 2rem 0;
+}
+
+.home-explore-button button{
+    background-color: black;
+    color: white;
+    padding: 0.6rem 2rem;
+    border-radius: 50px;
+    border: 0px;
+}
+
+.property-filter-menu-container{
+    background-color: white;
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    padding: 1rem 6rem;
+    gap: 4rem;
+    border-radius: 10rem;
+    margin: 2rem 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
+}
+
+.dark-mode .property-filter-menu-container {
+    background-color: #282828;
+}
+
+.filter-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.filter-buttons span {
+    padding: 1rem;
+    border-radius: 50%;
+}
+
+.filter-buttons .home-icon { 
+    background-color: rgb(91 181 55 / 30%);
+}
+.filter-buttons .factory-icon { 
+    background-color: rgb(175 121 44 / 30%);
+}
+.filter-buttons .hotel-icon { 
+    background-color: rgb(182 45 186 / 30%);
+}
+.filter-buttons .villa-icon { 
+    background-color: rgb(23 32 190 / 30%);
+}
+.filter-buttons .home-icon, .filter-buttons .home-icon-text {
+    color: rgb(91 181 55);
+}
+.filter-buttons .factory-icon, .filter-buttons .factory-icon-text {
+    color: rgb(175 121 44);
+}
+.filter-buttons .hotel-icon, .filter-buttons .hotel-icon-text {
+    color: rgb(182 45 186);
+}
+.filter-buttons .villa-icon, .filter-buttons .villa-icon-text {
+    color: rgb(23 32 190);
+}
+.dark-mode .filter-buttons .home-icon-text, .dark-mode .filter-buttons .factory-icon-text, 
+.dark-mode .filter-buttons .hotel-icon-text, .dark-mode .filter-buttons .villa-icon-text {
+    color: white
+}
+.filter-buttons a {
+    font-family: "Phudu", sans-serif;
+}
+
+/* Contact Page */
+
+.content-contact-page{
+    display: flex;
+    flex-direction: row;
+    height: 50vh;
+}
+
+.contact-page-left-container{
+    width:35%;
+    padding-top: 5rem;
+    font-weight: 500;
+}
+
+.contact-page-left-container{
+    color: black;
+}
+
+.dark-mode .contact-page-left-container{
+    color: white;
+}
+
+.content-contact-page p {
+    font-family: "Phudu", sans-serif;
+    line-height: 3rem;
+    font-size: larger;
+}
+
+.content-contact-page .contact-adress { 
+    font-size: medium;
+}
+
+.contact-page-right-container{
+    width: 65%;
+}
+.contact-page-right-container iframe {
+    border: 0;
+    border-radius: 2rem;
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+}
+
+/* Properties Page */
+
+
+.propertie-section { 
+    display: ruby;
+;
+}
+
+.propertie-card-container { 
+    width: 450px;
+    height: 350px;
+    margin: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+}
+
+.propertie-card-image { 
+    height: 75%;
+
+}
+.propertie-card-image img{
+    width: 100%;
+    height: -webkit-fill-available;
+    border-radius: 30px 30px 0 0;
+}
+
+.propertie-card-text{ 
+    background-color: #e2e1e1;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0 0 30px 30px;
+    padding: 0 1rem;
+    
+}
+
+.propertie-card-text p {
+    font-family: "Phudu", sans-serif;
+    font-size: x-large;
+}
+
+.propertie-card-text a {
+    align-self: flex-end;
+}
+
+.propertie-card-text a button {
+    background-color: black;
+    border: 0;
+    padding: 0.5rem 1.5rem;
+    color: white;
+    border-radius: 30px;
+    font-weight: 600;
+}

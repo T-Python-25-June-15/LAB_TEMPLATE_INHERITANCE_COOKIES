@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME | {%block title%} {%endblock%}</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+</head>
+<body class="{% if 'mode' in request.COOKIES %}dark-mode{%endif%}">
+
+    <div class="big-container">
+        <div class="navigation-bar">
+            <div class="nav-logo">
+                <span>HOME</span>
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li><a href="{% url 'main:view_main'%}">Home</a></li>
+                    <li><a href="{% url 'main:properties_view'%}">Properties</a></li>
+                    <li><a>Services</a></li>
+                    <li><a>About</a></li>
+                    <li><a href="{% url 'main:contact_view'%}">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-options">
+                <div class="nav-opt">
+                    <a><span class="material-symbols-outlined">person</span></a>
+                    <a><span>Sign up</span></a>
+                    <div class="modes-container">
+                        <a href="{% url 'main:light_mode_view'%}"><span class="material-symbols-outlined {%if 'mode' not in request.COOKIES %}mode-active{%endif%}">light_mode</span></a>
+                        <a href="{% url 'main:dark_mode_view'%}"><span class="material-symbols-outlined {%if 'mode' in request.COOKIES %}mode-active{%endif%}">dark_mode</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% block content%}
+        {% endblock %}
+    </div>
+
+    <div class="footer">
+        <p>Reak Estate International. All Right Reserved 2024</p>
+    </div>
+
+</body>
+</html>
