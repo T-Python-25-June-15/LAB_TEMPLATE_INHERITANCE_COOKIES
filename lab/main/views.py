@@ -22,12 +22,12 @@ def contactus(request:HttpRequest):
 
 
 def dark_mode(request:HttpRequest):
-    response = redirect("main:home_view")
+    response = redirect(request.META.get("HTTP_REFERER"))
     response.set_cookie("dark", True, max_age=60*60*24)
     return response
 
 def light_mode(request:HttpRequest):
-    response = redirect("main:home_view")
+    response = redirect(request.META.get("HTTP_REFERER"))
     response.set_cookie("dark", True, max_age=-3600)
     return response
 

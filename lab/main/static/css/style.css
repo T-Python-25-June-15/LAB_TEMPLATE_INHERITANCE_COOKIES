@@ -1,7 +1,7 @@
 
 
 body{
-    padding: 3rem 8rem;
+    padding: 2.5rem 8rem;
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Phudu', sans-serif;
@@ -117,7 +117,7 @@ nav {
     border-radius: 4rem;
     align-items: center;
     align-content: center;
-    width: 30%;
+    width: 29%;
     font-size: 120%;
 }
 
