@@ -1,0 +1,48 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}
+Home Page
+{% endblock %}
+
+{% block content %}
+  <section class="home-section">
+    <div class="home-content">
+      <h1>FIND YOUR <br> DREAMS</h1>
+      <p>Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties. Our <br>
+        catalog will surprise you. Rather, discover an unprecedented offers of luxury properties.</p>
+      <a href="{% url 'main:properties_view' %}"> <button class="home-button">Explore Properties</button> </a>
+    </div>
+  </section>
+
+  <nav class="bottom-nav">
+            <div class="bottom-navigation">
+              <div class="home">
+                <span class="material-symbols-outlined home-icon">
+                home
+                </span>
+                ALL
+              </div>
+            <div class="prop">
+                <span class="material-symbols-outlined propreties-icon">
+                factory
+                </span>
+                PROPERTIES
+            </div>
+            
+            <div class="hotel">
+                  <span class="material-symbols-outlined hotel-icon">
+                hotel
+                </span>
+                HOTEL 
+            </div>
+
+            <div class="villa"> 
+              <span class="material-symbols-outlined villa-icon">
+                villa
+                </span>
+            VILLA
+        </div>
+            </div>
+    </nav>
+
+{% endblock %}
