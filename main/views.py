@@ -9,6 +9,18 @@ def index_view(request:HttpRequest):
         resp.set_cookie('mode', 'light', max_age=60*60*24)
     return resp
 
+def contact_view(request:HttpResponse):
+    resp = render(request, 'main/contact.html')
+    if not 'mode' in request.COOKIES:
+        resp.set_cookie('mode', 'light', max_age=60*60*24)
+    return resp
+
+def properties_view(request:HttpResponse):
+    resp = render(request, 'main/properties.html')
+    if not 'mode' in request.COOKIES:
+        resp.set_cookie('mode', 'light', max_age=60*60*24)
+    return resp
+
 def change_mode(request:HttpRequest):
     resp = redirect('/')
     if 'mode' in request.COOKIES:

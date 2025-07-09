@@ -1,7 +1,7 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="en" {% if request.COOKIES.mode == 'dark' %} class="dark_theme" {% endif %}>
+<html lang="en" class="{% if request.COOKIES.mode == 'dark' %} dark_theme {% endif %} {% block tag %}{% endblock tag %}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,11 +20,11 @@
     <header>
         <h1>HOME</h1>
         <div class="links">
-            <a href="">Home</a>
-            <a href="">Properties</a>
+            <a href="{% url 'main:index_view' %}">Home</a>
+            <a href="{% url 'main:properties_view' %}">Properties</a>
             <a href="">Servicese</a>
             <a href="">About</a>
-            <a href="">Contact</a>
+            <a href="{% url 'main:contact_view' %}">Contact</a>
         </div>
         <div class="icons">
             <a href="">
@@ -42,6 +42,8 @@
       
     {% endblock body %}
     </main>
-    
+    <footer>
+    RealeEstate
+</footer>
 </body>
 </html>
