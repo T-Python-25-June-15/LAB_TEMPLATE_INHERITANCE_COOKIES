@@ -1,0 +1,283 @@
+* {
+  font-family: "Phudu", sans-serif;
+  font-optical-sizing: auto;
+  padding: 0;
+  font-weight: 600;
+  margin: 0;
+  color: white;
+}
+
+body {
+    background-color: #323232;
+}
+
+header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    right: 5rem;
+    left: 5rem;
+    top: 5rem;
+}
+
+nav {
+    display: flex;
+    gap: 3rem;
+    padding: 1.7rem 8rem;
+    background-color: #282828;
+    border-radius: 5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    transition: .6s;
+}
+
+nav a:hover {
+    text-decoration: none;
+    color: red;
+    font-size: 18px;
+}
+
+
+.settings {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    width: auto;
+}
+
+.settings button {
+    border: none;
+    background: none;
+    transition: 0.35s;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.settings .night {
+    padding: 4px;
+    background-color: #282828;
+    border-radius: 1rem;
+}
+
+.settings span {
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.settings button:hover span {
+    color: red;
+    font-size: 25px;
+}
+
+.settings .text {
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.settings .text:hover {
+    font-size: 18px;
+}
+
+header h1,.logo {
+    font-size: 1.7rem;
+    width: auto;
+    margin-right: 2rem;
+    transition: .5s;
+    text-decoration: none;
+    color: white;
+}
+header h1,.logo:hover {
+    font-size: 2rem;
+    color: red;
+}
+
+
+.container {
+    background-image: url(../images/skyscraper-dark.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 12rem 5.5rem 8rem 5.5rem;
+}
+
+.btn {
+    padding: 10px 28px;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 1rem;
+    font-weight: 400;
+}
+
+footer {
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #282828;
+    height: 2rem;
+    margin-top: 15rem;
+}
+
+.btn-container {
+    display: flex;
+    gap: 3rem;
+    background-color: #282828;
+    border-radius: 4rem;
+    padding: 1rem 4rem;
+    position: relative;
+    margin: 0 auto;
+    width: fit-content;
+    bottom: 4rem;
+    box-shadow: 0 0 10px 1px #282828;
+}
+
+.content {
+    text-align: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0 1rem;
+}
+
+.content span{
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 3rem;
+}
+
+.content h5{
+    text-align: center;
+}
+
+
+.green {
+    background-color: #c6eabf;
+    color: #2eb910;
+}
+
+.purple {
+    background-color: #f1beed;
+    color: #c80dc0;
+}
+
+.orange {
+    background-color: #ebd5bc;
+    color: #b8770d;
+}
+
+.blue {
+    background-color: #b8bcef;
+    color: #171bc6;
+}
+
+.hgreen {
+    color: white;
+}
+
+.hpurple {
+    color: white;
+}
+
+.horange {
+    color: white;
+}
+
+.hblue {
+    color: white;
+}
+
+h4 {
+    padding-top: .5rem;
+}
+.container h1 {
+    font-size: 7rem;
+    width: 30rem;
+    opacity: 1;
+    animation: fadeIn 1s ease-in-out forwards;
+    height: 20rem;
+    position: relative;
+}
+
+@keyframes fadeIn {
+  0% {left: 20rem; font-size: 1rem; top: 10rem;}
+  50% {left: -2rem; font-size: 5rem; top: 3rem;}
+  100% {left: 0rem; font-size: 7rem; top: 0rem;}
+}
+
+.properties_container {
+    padding: 12rem 13.5rem;
+}
+
+.card_container {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 1rem;
+}
+
+.card {
+    width: 30rem;
+    border-radius: 2rem;
+    background-color: #282828;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card img {
+    width: 100%;
+    height: 17rem;
+    border-radius: 2rem 2rem 0 0;
+}
+
+.card h2 {
+    padding: 15px;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.card-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 0 15px 15px;
+}
+
+.contact_container {
+    padding: 12rem 13.5rem;
+    background-image: url(../images/email.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contact_sides {
+    display: flex;
+    justify-content: space-around;
+}
+
+.contact {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.map iframe {
+    border-radius: 2rem;
+    width: 55rem;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
