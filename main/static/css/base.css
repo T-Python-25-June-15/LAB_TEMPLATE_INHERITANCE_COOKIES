@@ -254,11 +254,11 @@ main {
     right: 50%;
     transform: translateX(50%);
     background-color: var(--bg_color);
-    box-shadow: 1px 1px 5px 5px var(--shadow_color);
+    /* box-shadow: 1px 1px 5px 5px var(--shadow_color); */
     width: 60%;
     display: flex;
     justify-content: center;
-    align-items: start;
+    align-items: center;
     border-radius: 100px;
     gap: 20px;
 }
@@ -273,6 +273,7 @@ main {
 .container .container_footer a{
     font-size: small;
     display: flex;
+    margin: 0;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -429,6 +430,11 @@ main {
     justify-content: space-between;
     box-shadow: 1px 1px 5px lightgray;
     color: black;
+    transition: all 0.3s ease-in-out;
+}
+
+#properties .grid_container .box:hover {
+    transform: scale(1.05);
 }
 
 #properties .grid_container .box img {
