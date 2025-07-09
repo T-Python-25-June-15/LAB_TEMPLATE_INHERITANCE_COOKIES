@@ -5,26 +5,33 @@
 <meta name="viewport" content="width=device-width, initial
 -scale=1">
 <title>{% block title %} {% endblock %}</title>
+
+    {% if theme == 'dark' %}
+    <link rel="stylesheet" href="/static/css/style-dark.css" class="css">
+    {% else %}
     <link rel="stylesheet" href="/static/css/style.css" class="css">
+    {% endif %}
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@300..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Home</h1>
+        <a href="/" class="logo">Home</a>
         <nav>
-            <a href="#">Home</a>
-            <a href="#">Properties</a>
+            <a href="/">Home</a>
+            <a href="/properties">Properties</a>
             <a href="#">Services</a>
             <a href="#">About</a>
-            <a href="#">Contact</a>
+            <a href="/contact">Contact</a>
             
         </nav>
         <div class="settings">
             <button><span class="material-symbols-outlined">person</span></button>
-            <button><p>sign in</p></button>
-            <button><span class="material-symbols-outlined">clear_day</span></button>
-            <button><span class="material-symbols-outlined">bedtime</span></button>
+            <button><span class="text">sign up</span></button>
+            <a href="/theme/light/" class="day"><span class="material-symbols-outlined">wb_sunny</span></a>
+            <a href="/theme/dark/" class="night"><span class="material-symbols-outlined">bedtime</span></a>
         </div>
     </header>
 

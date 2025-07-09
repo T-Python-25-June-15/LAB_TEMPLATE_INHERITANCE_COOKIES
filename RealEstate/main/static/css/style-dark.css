@@ -4,10 +4,11 @@
   padding: 0;
   font-weight: 600;
   margin: 0;
+  color: white;
 }
 
 body {
-    background-color: #ebeae9;
+    background-color: #323232;
 }
 
 header {
@@ -24,13 +25,13 @@ nav {
     display: flex;
     gap: 3rem;
     padding: 1.7rem 8rem;
-    background-color: white;
+    background-color: #282828;
     border-radius: 5rem;
 }
 
 nav a {
     text-decoration: none;
-    color: black;
+    color: white;
     transition: .6s;
 }
 
@@ -60,9 +61,9 @@ nav a:hover {
     justify-content: center;
     cursor: pointer;
 }
-.settings .day {
+.settings .night {
     padding: 4px;
-    background-color: white;
+    background-color: #282828;
     border-radius: 1rem;
 }
 
@@ -86,17 +87,13 @@ nav a:hover {
     font-size: 18px;
 }
 
-header a {
-    color: black;
-}
-
 header h1,.logo {
     font-size: 1.7rem;
     width: auto;
     margin-right: 2rem;
     transition: .5s;
     text-decoration: none;
-    color: black;
+    color: white;
 }
 header h1,.logo:hover {
     font-size: 2rem;
@@ -105,7 +102,7 @@ header h1,.logo:hover {
 
 
 .container {
-    background-image: url(../images/skyscraper.jpeg);
+    background-image: url(../images/skyscraper-dark.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     padding: 12rem 5.5rem 8rem 5.5rem;
@@ -126,7 +123,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: #282828;
     height: 2rem;
     margin-top: 15rem;
 }
@@ -134,14 +131,14 @@ footer {
 .btn-container {
     display: flex;
     gap: 3rem;
-    background-color: white;
+    background-color: #282828;
     border-radius: 4rem;
     padding: 1rem 4rem;
     position: relative;
     margin: 0 auto;
     width: fit-content;
     bottom: 4rem;
-    box-shadow: 0 0 10px 1px rgb(220, 220, 220);
+    box-shadow: 0 0 10px 1px #282828;
 }
 
 .content {
@@ -183,19 +180,19 @@ footer {
 }
 
 .hgreen {
-    color: #2eb910;
+    color: white;
 }
 
 .hpurple {
-    color: #c80dc0;
+    color: white;
 }
 
 .horange {
-    color: #b8770d;
+    color: white;
 }
 
 .hblue {
-    color: #171bc6;
+    color: white;
 }
 
 h4 {
@@ -231,7 +228,7 @@ h4 {
 .card {
     width: 30rem;
     border-radius: 2rem;
-    background-color: #e2e1e1;
+    background-color: #282828;
     overflow: hidden;
     display: flex;
     flex-direction: column;
