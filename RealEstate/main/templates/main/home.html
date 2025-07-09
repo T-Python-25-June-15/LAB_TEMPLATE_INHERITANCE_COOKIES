@@ -3,39 +3,40 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-  <div class="main-section">
+<div class="main-section {% if background == 'black' %}dark-bg{% else %}light-bg{% endif %}">
   <h1 class="fade-in">FIND YOUR <br> DREAMS</h1>
-    <p>
-      Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties.
-      Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties.
-    </p>
-    <a href="#" class="btn">Explore Properties</a>
-  </div>
+  <p>
+    Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties.
+    Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties.
+  </p>
+  <a href="#" class="btn">Explore Properties</a>
+</div>
 
-  <div class="filter-bar">
-    <a href="">
-    <div class="filter-option">
+<div class="filter-bar {% if background == 'black' %}dark-filter-bar{% else %}light-filter-bar{% endif %}">
+  <a href="">
+    <div class="filter-option {% if background == 'black' %}dark-filter-option{% else %}light-filter-option{% endif %}">
       <div class="icon">🏠</div>
       <p>ALL</p>
     </div>
-    </a>
-    <a href="{% url 'main:properties_view' %}">
-    <div class="filter-option">
+  </a>
+  <a href="{% url 'main:properties_view' %}">
+    <div class="filter-option {% if background == 'black' %}dark-filter-option{% else %}light-filter-option{% endif %}">
       <div class="icon">🏢</div>
       <p>PROPERTIES</p>
     </div>
-    </a>
-       <a href="">
-    <div class="filter-option">
+  </a>
+  <a href="">
+    <div class="filter-option {% if background == 'black' %}dark-filter-option{% else %}light-filter-option{% endif %}">
       <div class="icon">🛏️</div>
       <p>HOTEL</p>
     </div>
-    </a>
-    <a href="">
-    <div class="filter-option">
+  </a>
+  <a href="">
+    <div class="filter-option {% if background == 'black' %}dark-filter-option{% else %}light-filter-option{% endif %}">
       <div class="icon">🏡</div>
       <p>VILLA</p>
     </div>
-    </a>
-  </div>
+  </a>
+</div>
+
 {% endblock %}

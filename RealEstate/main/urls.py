@@ -11,7 +11,6 @@ urlpatterns = [
     path('contact/', views.contact_view , name="contact_view"),
     path('dark_base/', views.dark_base_view , name="dark_base_view"),
     path('home_dark/', views.home_dark_view , name="home_dark_view"),
-
+    path('toggle-background/', views.toggle_background, name="toggle_background")
 
 ]
-

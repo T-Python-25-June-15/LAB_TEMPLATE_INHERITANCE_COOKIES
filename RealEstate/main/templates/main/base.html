@@ -1,36 +1,42 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="background-color: {{ background }};">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{% block title %}Real Estate{% endblock %}</title>
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
-<body class="{% block body_class %}{% endblock %}">
+<body class="{% if background == 'black' %}dark-mode{% endif %}">
+  
+  <div class="page-background {% if background == 'black' %}dark-bg{% else %}light-bg{% endif %}">
 
-  <header class="header">
-    <div class="logo">HOME</div>
-    <nav class="nav-menu">
-      <a href="{% url 'main:home_view' %}">Home</a>
-      <a href="{% url 'main:properties_view' %}">Properties</a>
-      <a href="#">Services</a>
-      <a href="#">About</a>
-      <a href="{% url 'main:contact_view' %}">Contact</a>
-    </nav>
-    <div class="header-right">
-      <a class="icon">👤</a>
-      <a href="#" class="signup">Sign up</a>
-      <a class="icon" href="{% url 'main:home_view' %}">🌞</a>
-      <a class="icon" href="{% url 'main:home_dark_view' %}">🌙</a>
-    </div>
-  </header>
+    <header class="header">
+      <div class="logo">HOME</div>
+      <nav class="nav-menu">
+        <a href="{% url 'main:home_view' %}">Home</a>
+        <a href="{% url 'main:properties_view' %}">Properties</a>
+        <a href="#">Services</a>
+        <a href="#">About</a>
+        <a href="{% url 'main:contact_view' %}">Contact</a>
+      </nav>
+      <div class="header-right">
+        <a class="icon">👤</a>
+        <a href="#" class="signup">Sign up</a>
+        <form action="{% url 'main:toggle_background' %}" method="post" class="theme-toggle-form">
+          {% csrf_token %}
+          <button type="submit" value="white" name="button" class="theme-btn">Light</button>
+          <button type="submit" value="black" name="button" class="theme-btn">Black</button>
+        </form>
+      </div>
+    </header>
 
-  <main>
-    {% block content %}
-    {% endblock %}
-  </main>
+    <main>
+      {% block content %}
+      {% endblock %}
+    </main>
 
+  </div>
 </body>
 </html>

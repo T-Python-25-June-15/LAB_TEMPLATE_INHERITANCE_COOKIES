@@ -1,11 +1,23 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 
 # Create your views here.
 
 def home_view(request):
-    
-    
-    return render(request, "main/home.html", )
+
+    cookie_value = request.COOKIES.get('background', "white")
+
+
+    response = render(request, "main/home.html", {"background": cookie_value})
+    return response
+
+def toggle_background(request):
+
+
+    background = request.POST.get('button')
+
+    response = render(request, "main/home.html", {"background": background})
+    response.set_cookie("background", background)
+    return response
 
 
 def contact_view(request):
@@ -35,7 +47,10 @@ def properties_view(request):
         'properties': properties 
     }
     return render(request, 'main/properties.html', context)
+
+
 def base_view(request):
     
     
     return render(request, "main/base.html", )
+
