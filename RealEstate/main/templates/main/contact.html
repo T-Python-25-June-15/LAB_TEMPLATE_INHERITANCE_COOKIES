@@ -1,0 +1,22 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block body_class %}contact_page{% endblock %}
+{% block content %}
+<div class="contact_wapper">
+    
+    <div class="contact_info">
+        <h4>CONTACT US</h4>
+        <br>
+        <h5>TELEPHONE: <a href="tel:572-638-83764" class="a_contact">+966 57263883764</a></h5>
+        <h5>EMAIL: <a href="mailto:info@realeastate.com" class="a_contact">info@realeastate.com</a></h5>
+        <br>
+        <h5>ADDRESS:</h5>
+        <p>ANAS BIN MALIK,RIYADH</p>
+        <p>BUILDING W-112</p>
+        <p>SAUDI ARABIA</p>
+    </div>
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCHbFVROiNXZcVWuIj9eaocO9cUTD5oVz8&q=Anas+Bin+Malik+Rd,+Riyadh+Saudi+Arabia"></iframe>
+    </div>
+</div>
+{% endblock%}
