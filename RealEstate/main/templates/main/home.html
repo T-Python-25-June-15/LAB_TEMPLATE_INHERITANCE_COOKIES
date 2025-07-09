@@ -1,0 +1,47 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="{% if request.COOKIES.theme == 'dark' %}hero dark-bg{% else %}hero light-bg{% endif %}">
+    <div class="hero-content">
+        <h1 class="fade-in">FIND YOUR DREAMS</h1>
+        <p>Our catalog will surprise you. Rather, discover an unprecedented offer of luxury properties.Our catalog will surprise you. Rather, discover an unprecedented offer of luxury properties.</p>
+        <a href="{% url 'main:properties_view' %}" class="btn small-btn">Explore Properties</a>
+    </div>
+</div>
+
+<!-- <footer class="footer-bar">
+  <div class="footer-icons">
+      <a href="#"><span class="material-icons icon green">home</span></a>
+      <a href="#"><span class="material-icons icon orange">apartment</span></a>
+      <a href="#"><span class="material-icons icon pink">hotel</span></a>
+      <a href="#"><span class="material-icons icon purple">villa</span></a>
+  </div>
+</footer> -->
+
+<div class="footer-bar">
+  <div class="footer-icons">
+    <div class="footer-item">
+      <a href="#"><span class="material-icons icon green">home</span></a>
+      <p class="footer-label green-label">ALL</p>
+    </div>
+    <div class="footer-item">
+      <a href="#"><span class="material-icons icon orange">apartment</span></a>
+      <p class="footer-label orange-label">PROPERTIES</p>
+    </div>
+    <div class="footer-item">
+      <a href="#"><span class="material-icons icon pink">hotel</span></a>
+      <p class="footer-label pink-label">HOTEL</p>
+    </div>
+    <div class="footer-item">
+      <a href="#"><span class="material-icons icon purple">villa</span></a>
+      <p class="footer-label purple-label">VILLA</p>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+
+
+
+
