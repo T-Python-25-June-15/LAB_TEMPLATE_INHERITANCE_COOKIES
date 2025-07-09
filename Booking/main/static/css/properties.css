@@ -30,7 +30,6 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /* gap: 11px; */
     row-gap: 35px;
     width: 1150px;
     flex-wrap: wrap;
@@ -109,8 +108,8 @@ body.dark .properties-main .cards .property-card a {
 }
 
 body.dark .properties-main .cards .property-card a:hover {
-    background-color: #dddddd;
-    color: #000000;
+    background-color: white;
+    color: black;
 }
 
 body.dark img {

@@ -6,7 +6,6 @@
 
 {% block fileStyle %}
 <link rel="stylesheet" href="{% static 'css/properties.css' %}">
-<!-- <meta http-equiv="refresh" content="4"> -->
 {% endblock %}
 
 
@@ -19,27 +18,14 @@
         <h1>Our Properties</h1>
     </div>
     <div class="cards">
+    {% for prop in properties %}
         <div class="property-card">
-            <img src="/static/images/villa1.jpg" alt="property photo">
-            <h3>Villa Modern in Malqa</h3>
+            <img src="/static/images/{{ prop.image }}" alt="property photo">
+            <h3>{{ prop.title }}</h3>
             <a href="#">more</a>
         </div>
-        <div class="property-card">
-            <img src="/static/images/villa2.jpg" alt="property photo">
-            <h3>Great Home For You in Rimal</h3>
-            <a href="#">more</a>
-        </div>
-        <div class="property-card">
-            <img src="/static/images/villa3.jpg" alt="property photo">
-            <h3>Villa with 8 Bedrooms in Swedey</h3>
-            <a href="#">more</a>
-        </div>
-        <div class="property-card">
-            <img src="/static/images/villa4.jpg" alt="property photo">
-            <h3>Amazing Villa in Hitten</h3>
-            <a href="#">more</a>
-        </div>
-    </div>
+    {% endfor %}
+</div>
    
 </div>
 
