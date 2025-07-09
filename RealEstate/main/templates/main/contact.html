@@ -1,0 +1,37 @@
+{% extends 'main/base.html'%}
+{%load static%}
+
+{% block title %} 
+Contact
+{% endblock %}
+
+{% block content%}
+<div class="background-image-container">
+    <img src= "{% static 'images/email.jpg'%} ">
+</div>
+
+<div class="content-container">
+    <div class="content-page-title">
+        <h1>Contact Us</h1>
+    </div>
+    <div class="content-contact-page">
+        <div class="contact-page-left-container">
+            <p>
+                Telephone: <a href="tel:+96657263883764">+966 57263883764 </a>
+            </p>
+            <p>
+                Email: <a href="mailto:info@realeastate.com">info@realeastate.com</a>
+            </p>
+            <p> Address: <br>
+                <div class="contact-adress">
+                    ANAS BIN MALIK, RIYADH <br> BUILDING W-112 <br> SAUDI ARABIA
+                </div>
+            </p>
+        </div>
+        <div class="contact-page-right-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.0690423422743!2d46.7276293!3d24.8273124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2efc6d472d42af%3A0x24b3a53de9cbc5c3!2sPark%20Avenue%20Mall!5e0!3m2!1sen!2ssa!4v1752057233919!5m2!1sen!2ssa" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

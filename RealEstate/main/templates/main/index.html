@@ -1,0 +1,52 @@
+{% extends 'main/base.html'%}
+{%load static%}
+
+{% block title%}
+Home
+{% endblock %}
+
+
+{% block content %}
+<div class="background-image-container">
+    {% if 'mode' not in request.COOKIES %} 
+    <img src= "{% static 'images/skyscraper.jpeg'%} ">
+    {%endif%}
+    {% if 'mode' in request.COOKIES %} 
+    <img src= "{% static 'images/skyscraper-dark.jpg'%} ">
+    {%endif%}
+</div>
+
+<div class="content-container">
+    <div class="home-title-container">
+        <span>Find your dreams</span>
+    </div>    
+    <div class="description-container">
+        <p>Our catalog will suprise you. Rather, discover an unprecendented offers of luxury properties. Our catalog will suprise you. Rather, discover an unprecendented offers of luxury properties.</p>
+    </div>
+    <div class="home-explore-button">
+        <a href="{% url 'main:properties_view'%}"><button>Explore Properties</button></a>
+    </div>
+</div>
+
+<div class="property-filter-menu-container">
+    <div class="filter-buttons">
+        <span class="material-symbols-outlined home-icon">home</span>
+        <a class="home-icon-text">All</a>
+    </div>
+    <div class="filter-buttons">
+        <span class="material-symbols-outlined factory-icon">factory</span>
+        <a class="factory-icon-text">Properties</a>
+    </div>
+    <div class="filter-buttons">
+        <span class="material-symbols-outlined hotel-icon">hotel</span>
+        <a class="hotel-icon-text">Hotel</a>
+    </div>
+    <div class="filter-buttons">
+        <span class="material-symbols-outlined villa-icon">villa</span>
+        <a class="villa-icon-text">Villa</a>
+    </div>
+</div>
+
+<div> 
+</div>
+{% endblock %}
