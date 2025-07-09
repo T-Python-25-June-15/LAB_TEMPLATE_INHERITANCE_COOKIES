@@ -1,0 +1,508 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Phudu', sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+body.dark {
+
+    color: white;
+}
+
+
+.light-bg {
+    background-image: url('../images/skyscraper.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+.dark-bg {
+    background-image: url('../images/skyscraper-dark.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+
+
+.navbar-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    z-index: 10;
+}
+
+
+
+.site-title {
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding-left: 40px;
+    padding-top: 12px;
+    
+}
+
+
+.site-title:hover {
+    color: red;
+    transform: scale(1.1);
+}
+
+
+.theme-icon .material-icons,
+.left-icons .material-icons {
+    font-size: 24px;
+    color: black;
+    transform: scale(1.1);
+}
+
+/* body.dark .material-icons {
+    color: white;
+} */
+
+body .right-icons .material-icons:hover {
+    color: red !important;
+    
+}
+
+body.dark .right-icons .material-icons {
+    color: white;
+}
+
+body.dark .signup-text {
+    color: white;
+}
+
+
+body.dark .light-icon {
+    border: none;
+}
+
+.signup-text {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    padding: 20px 30px;
+    border-radius: 40px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    flex: 1;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-right: 150px;
+    /* transition: all 0.3s ease */
+   
+}
+/* .navbar:hover{
+    transform: scale(1.1)
+} */
+
+body.dark .navbar {
+    background: #1c1c1c;
+}
+
+.right-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.right-icons .material-icons {
+    font-size: 24px;
+    color: black;
+    transition: all 0.3s ease;
+}
+
+body.dark .right-icons {
+    color: white;
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.nav-links li a:hover {
+    color: red;
+    transform: scale(1.1)!important;
+}
+
+
+.hero-content {
+    text-align: left;
+    max-width: 600px;
+    margin-left: -550px; 
+}
+.hero {
+
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    padding: 20px;
+}
+
+.hero,
+.navbar-wrapper {
+    width: 100%;
+}
+
+.hero-content h1 {
+    font-size: 100px;
+    font-weight: 950;
+    margin-bottom: 20px;
+    animation: dreamPop 1.5s ease-in-out forwards;
+    opacity: 1;
+  }
+
+
+.hero-content p {
+    text-transform: lowercase;
+    font-size: 18px;
+    margin: 0 0 20px 0;
+    line-height: 1.6;
+}
+
+.btn.small-btn {
+    background-color: black;
+    color: white;
+    padding: 8px 20px;
+    font-size: 14px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+.btn.small-btn:hover {
+    background-color: #444;
+}
+
+  @keyframes dreamPop{
+    0% {
+      transform: scale(0.1);
+      opacity: 0;
+      color: pink;
+    }
+    50% {
+      transform: scale(1.2);
+      opacity: 1;
+      color: #4a90e2; 
+    }
+    75% {
+      transform: scale(0.95);
+      color: #f69bc8; 
+    }
+    /* 100% {
+      transform: scale(1);
+      color: black;
+    } */
+  }
+
+  
+
+/* div footer from the home */
+.footer-bar {
+    position: absolute;
+    bottom: -10px; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 10px 30px;
+    border-radius: 60px;
+    z-index: 10;
+    height: 100px;
+    width: 590px;
+}
+
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.footer-label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.footer-label.green-label {
+    color: green;
+}
+
+.footer-label.orange-label {
+    color: #a85e00;
+}
+
+.footer-label.pink-label {
+    color: #c30084;
+}
+
+.footer-label.purple-label {
+    color: #2419c2;
+}
+
+body.dark .footer-label {
+    color: white;
+}
+
+body.home-page .footer {
+    margin-top: -50px; 
+}
+body.contact-page .footer{
+    margin-top: -50px;
+}
+.footer {
+    height: 250px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+body.dark .footer-bar{
+    background-color: #1c1c1c;
+}
+
+.footer-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 55px;
+}
+
+.footer-icons .material-icons {
+    font-size: 28px;
+    padding: 15px;
+    border-radius: 50%;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+
+.icon.green {
+    background-color: #90ee90;
+    color: green;
+}
+
+.icon.orange {
+    background-color: #f4d4a5;
+    color: #a85e00;
+}
+
+.icon.pink{
+    background-color: #f9ccf1;
+    color: #c30084;
+}
+
+.icon.purple{
+    background-color: #d2d8ff;
+    color: #2419c2;
+}
+
+.footer-icons .material-icons:hover{
+    transform: scale(1.2);
+}
+
+
+/* from the base html */
+.footer{
+    height: 250px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    /* margin-bottom: 600px; */
+}
+
+
+.footer-light {
+    background-color: #f5f5f5; 
+}
+
+.footer-dark {
+    background-color: #000000dd; 
+    /* background-color: transparent; */
+    /* background-color: black; */
+}
+
+
+
+.properties-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 8px 60px;
+    /* margin-top: 140px; */
+}
+
+.property-card {
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 0px;
+    padding-bottom: 8px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.properties_text{
+    margin-top: 160px;
+    margin-left: 15px;
+}
+
+.property-card img{
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    height: 250px;
+}
+
+.property-card p {
+    font-weight: bold;
+    margin: 10px 0;
+    margin-left: 20px;
+}
+
+.property-card .btn {
+    align-self:flex-end;
+    padding: 6px 18px;
+    font-size: 14px;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.property-card .btn:hover {
+    background-color: #444;
+}
+
+body.dark .property-card {
+    background-color: rgba(28, 28, 28, 0.85);
+}
+
+body.properties-page {
+    background-color: #e7e6e4 !important;
+    background-image: none !important;
+}
+
+body.dark.properties-page {
+    background-color: #121212 !important;
+}
+
+/* contact us page */
+body.contact-page {
+    background-image: url('../images/email.jpg') !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+body.dark.contact-page {
+    background-image: url('../images/email.jpg') !important; 
+}
+
+.contact-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 140px 60px 60px;
+    gap: 60px;
+    flex-wrap: wrap;
+    color: inherit;
+    
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+    color: inherit;
+    font-size: 19px;
+    padding: 30px;
+    
+   
+}
+
+.contact-info a {
+    color: blue;
+    text-decoration: underline;
+  
+}
+
+.contact-info h2 {
+    position: relative;
+    top: -26px; 
+    margin-bottom: 30px;
+}
+
+.map-container {
+    flex: 2;
+    min-width: 300px;
+    max-width: 1000px;
+    height: 400px;
+    border-radius: 15px;
+    margin-top: 40px;
+    overflow: hidden;
+    margin-left: -2px;
+    margin-bottom: 40px;
+
+}
+/* .theme-icon.active {
+    box-shadow: 0 0 0 3px rgba(0,0,0,0.2);
+} */
+
+.theme-icon.light-icon.active {
+    background-color: rgba(255, 255, 255, 0.7); 
+    border-radius: 50%;
+    padding: 3px;
+ 
+}
+
+.theme-icon.dark-icon.active {
+    background-color: rgba(0, 0, 0, 0.7); 
+    border-radius: 50%;
+    padding: 3px;
+ 
+}

@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Real Estate</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Phudu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="
+{% if request.path == '/' %} home-page {% endif %}
+  {% if 'properties' in request.path %}
+    properties-page {% if request.COOKIES.theme == 'dark' %}dark{% endif %}
+  {% elif request.COOKIES.theme == 'dark' %}
+    dark dark-bg
+  {% else %}
+    light-bg
+  {% endif %}
+  {% if 'contact' in request.path %} contact-page{% endif %}
+">
+
+
+    <header class="navbar-wrapper">
+        <div class="site-title">HOME</div>
+    
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="{% url 'main:home_view' %}">Home</a></li>
+                <li><a href="{% url 'main:properties_view' %}">Properties</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="{% url 'main:contact' %}">Contact</a></li>
+            </ul>
+        </nav>
+    
+        <div class="right-icons">
+            <a href="#"><span class="material-icons">person</span></a>
+            <span class="signup-text">Signup</span>
+            <a href="{% url 'main:set_theme' %}?theme=light" class="theme-icon light-icon {% if request.COOKIES.theme == 'light' %}active{% endif %}">
+                <span class="material-icons">light_mode</span>
+            </a>
+            <a href="{% url 'main:set_theme' %}?theme=dark" class="theme-icon dark-icon {% if request.COOKIES.theme == 'dark' %}active{% endif %}">
+                <span class="material-icons">dark_mode</span>
+            </a>
+            
+        </div>
+    </header>
+    
+    
+
+    {% block content %}
+    {% endblock %}
+    <footer class="footer {% if request.COOKIES.theme == 'dark' %}footer-dark{% else %}footer-light{% endif %}"></footer>
+
+
+</body>
+</html>
+
+
+
+
+
+
