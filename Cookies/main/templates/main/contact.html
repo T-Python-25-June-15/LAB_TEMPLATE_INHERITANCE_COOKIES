@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block body_class %}contact-bg{% endblock %}
+{% load static %}
+{% block content %}
+<h2>Contact Us</h2>
+<div class="contact-container">
+  <div class="contact-info">
+    <h3>Telephone: <a href="tel:+966501234567">+966 50 123 4567</a></h3>
+    <h3>Email: <a href="mailto:info@example.com">villa56@gmail.com</a></h3>
+    <h3>Address:</h3>
+    <p>ANAS BIN MALIK, RIYADH
+BUILDING W-112
+SAUDI ARABIA</p>
+  </div>
+  <div class="map-container">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.035037628122!2d46.675295!3d24.774265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03a893218115%3A0x8f8b47c6bd9b1a59!2z2KfZhNi52LHYp9mK2YUg2KfZhNin2YXYqtmK2Kkg2KfZhNis2KfZhNmK2Kkg2KfZhNiu2KfZhtmK2KkgLSBBbC1SYWJ3YWh!5e0!3m2!1sen!2ssa!4v1629370418399!5m2!1sen!2ssa" 
+      width="100%" 
+      height="300" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</div>
+
+{% endblock %}

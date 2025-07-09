@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block body_class %}properties-bg{% endblock %}
+{% load static %}
+
+{% block content %}
+
+<h2 class="section-title">Our Properties</h2>
+<div class="card-container">
+  <div class="property-card">
+    <img src="{% static 'image/villa1.jpg' %}" alt="House 1">
+    <h3>Modern Villa</h3>
+    <button>View More</button>
+  </div>
+
+  <div class="property-card">
+    <img src="{% static 'image/villa2.jpg' %}" alt="House 2">
+    <h3>Luxury Apartment</h3>
+    <button>View More</button>
+  </div>
+
+  <div class="property-card">
+    <img src="{% static 'image/villa3.jpg' %}" alt="House 3">
+    <h3>Beach House</h3>
+    <button>View More</button>
+  </div>
+
+  <div class="property-card">
+    <img src="{% static 'image/villa4.jpg' %}" alt="House 4">
+    <h3>Country Cottage</h3>
+    <button>View More</button>
+  </div>
+</div>
+
+{% endblock %}
