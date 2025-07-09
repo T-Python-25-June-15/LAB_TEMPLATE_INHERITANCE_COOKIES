@@ -1,0 +1,69 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+
+{% block pageTitle %} Properties {% endblock %}
+
+{% block content %}
+{% if 'dark' in  request.COOKIES %}
+<style>
+    body{
+      
+        background-color: #333333;
+
+    }
+
+    .villa-card{
+        background-color: #121212;
+
+    }
+    .villa-card-button {
+        background-color: #333;
+    }
+    </style>
+
+    {%else%}
+    <style>
+        body{
+          
+            background-color: #EBEAE9;
+    
+        }
+
+    .villa-card{
+        background-color: #dddddd;
+
+    }
+    .villa-card-button {
+        background-color: #000;
+    }
+        </style>
+
+    {%endif%}
+
+    <main>
+       <span style="font-size: 2rem;">
+        Our Properties
+       </span>
+
+
+       <div class="villas-menu">
+
+        {% for villa in properties %}
+    
+        <div class="villa-card">
+            <img class="villa-card-image" src="/static/main/{{ villa.image}}">
+            <div class="villa-card-details">
+                <div class="villa-card-title">{{ villa.title}}</div>
+            <a href="#"><div class="villa-card-button">more</div></a>
+            </div>
+        </div>
+        {%endfor%}
+    
+       </div>
+
+    </main>
+ 
+
+    {% endblock %}
+   

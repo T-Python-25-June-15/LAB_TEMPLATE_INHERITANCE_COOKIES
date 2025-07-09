@@ -1,0 +1,67 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+
+{% block pageTitle %} Contact us {% endblock %}
+
+{% block content %}
+{% if 'dark' in  request.COOKIES %}
+<style>
+    body{
+        background-image: url('/static/main/email.jpg');
+
+
+    }
+
+    </style>
+
+    {%else%}
+    <style>
+        body{
+            background-image: url('/static/main/email.jpg');
+
+    
+        }
+
+        </style>
+
+    {%endif%}
+
+    <main>
+       <span style="font-size: 2rem;">
+        Contact us
+       </span>
+
+
+       <div class="contactusContainer">
+        <div class="contactus-information">
+            <span>TELEPHONE : <a href="tel:966500000000">+966 500000000</a></span>
+            <br><br>
+            <span>EMAIL : <a href="mailto:alharbisa24@gmail.com">alharbisa24@gmail.com</a></span>
+            <br><br>
+            <span>Address :</span>
+<br><br>
+            <p>
+                Anas Bin Malek, Riyadh <br>
+                Building W-112<br>
+                Saudi Arabia<br>
+            </p>
+        </div>
+        <div class="map">
+            <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.429306353194!2d46.67413231500249!3d24.713551084115966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03870b77e78b%3A0x8b1f95e0c3e6e3a3!2sRiyadh%2C%20Saudi%20Arabia!5e0!3m2!1sen!2ssa!4v1622123456789!5m2!1sen!2ssa"
+            width="600"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+          
+        </div>
+       </div>
+    </main>
+ 
+
+    {% endblock %}
+   

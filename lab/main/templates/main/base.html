@@ -1,0 +1,113 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Phudu:wght@300..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link href="{% static 'css/style.css' %}" rel="stylesheet">
+<!--<meta http-equiv="refresh" content="5">-->
+    <title>{% block pageTitle %} {% endblock %}</title>
+</head>
+{% if 'dark' in  request.COOKIES %}
+<style>
+    body{
+      
+        color:white;
+
+    }
+    .active{
+        background-color: black;
+    }
+
+    .material-symbols-outlined{
+        color:white;
+    }
+
+    .center-nav{
+        background-color:#282828;
+    }
+
+    .center-nav a{
+        color:white;
+
+    }
+
+    .menu{
+        background-color:#282828;
+    
+    }
+    .menu span{
+        color:white;
+    }
+</style>
+{% else %}
+<style>
+ 
+    .active{
+        background-color: white;
+    }
+    .material-symbols-outlined{
+        color:black;
+    }
+    .center-nav{
+        background-color: white;
+    }
+
+    .center-nav a{
+        color:black;
+
+    }
+    .menu{
+        background-color:white;
+    
+    }
+
+</style>
+
+{% endif %}
+<body>
+    
+    <nav>
+        <div class="left-nav">
+            <h1 class="left-nav-header">Home</h1>
+        </div>
+        <div class="center-nav">
+            <a href="{% url 'main:home_view' %}">Home</a>
+            <a href="{% url 'main:properties_view' %}">Properties</a>
+            <a href="{% url 'main:contactus' %}">Services</a>
+            <a href="#">About</a>
+            <a href="{% url 'main:contactus' %}">Contact</a>
+        </div>
+        <div class="right-nav">
+            <div class="signup">
+                <span class="material-symbols-outlined">
+                    person
+                    </span>Sign up</div>
+     <a href="{% url 'main:light_mode' %}" class="{% if 'dark' not in  request.COOKIES %} active {%endif%}">
+            <span class="material-symbols-outlined">
+                sunny
+                </span>
+                </a>
+                <a href="{% url 'main:dark_mode' %}" class="{% if 'dark' in  request.COOKIES %} active {%endif%}">
+
+                <span class="material-symbols-outlined">
+                    bedtime
+                    </span>
+                    </a>
+        </div>
+    </nav>
+
+    {% block content %}
+
+
+    {%endblock%}
+
+    
+
+</body>
+</html>

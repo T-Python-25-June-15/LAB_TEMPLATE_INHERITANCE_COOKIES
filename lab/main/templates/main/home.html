@@ -1,0 +1,70 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block pageTitle %} Home {% endblock %}
+
+
+    
+{% block content %}
+{% if 'dark' in  request.COOKIES %}
+<style>
+    body{
+      
+        background-image: url('/static/main/skyscraper-dark.jpg');
+
+    }
+    </style>
+
+    {%else%}
+    <style>
+        body{
+          
+            background-image: url('/static/main/skyscraper.jpeg');
+    
+        }
+        </style>
+
+    {%endif%}
+
+
+    <main>
+        <div class="left-main">
+            <span class="main-left-header">FIND YOUR DREAMS</span>
+            <p>Our Catalog will supirse you, Rather, discover an unprecendented offers of luxury properties, Our catalog will supise you. Rather, discover an unprecendented offers of luxury properties.</p>
+        
+        <button class="main-left-button">Explore properties</button>
+        </div>
+        
+        
+     
+    </main>
+    <div class="menu">
+        <div class="menu-item1">
+            <span class="menu-icon material-symbols-outlined">
+                House
+                </span>
+                <span>All</span>
+        </div>
+        <div class="menu-item2">
+            <span class="menu-icon material-symbols-outlined">
+                Stacks
+                </span>
+                <span>Properties</span>
+        </div>
+        <div class="menu-item3">
+            <span class="menu-icon material-symbols-outlined">
+                hotel
+                </span>
+                <span>Hotel</span>
+        </div>
+        <div class="menu-item4">
+            <span class="menu-icon material-symbols-outlined">
+                Villa
+                </span>
+                <span>Villa</span>
+        </div>
+    </div>
+ 
+
+    {% endblock %}
+   
