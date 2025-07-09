@@ -74,7 +74,7 @@
 }
 
 .navbar {
-    background-color: white;
+    background-color: var(--bg-color);
     border-radius: 50px;
     padding: 30px 90px;
     display: flex;
@@ -82,9 +82,10 @@
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
+
 .navbar a {
     text-decoration: none;
-    color: black;
+    color: var(--text-color);
     font-weight: 500;
     font-size: 16px;
     transition: color 0.3s;
@@ -177,12 +178,12 @@ footer {
 
 
 .pill-footer-container {
-    background-color: white;
+    background-color: var(--bg-color);
     border-radius: 90px;
-    padding: 30px 100px;
+    padding: 18px 130px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     display: flex;
-    gap: 100px;
+    gap: 130px;
     align-items: center;
     pointer-events: auto;
 }
@@ -245,11 +246,12 @@ html[data-theme='dark'] .hero-section {
 
 .hero-text {
     max-width: 900px;
-    color: black;
+    color: var(--text-color);;
     text-align: left;
 }
 
 .hero-text h1 {
+    font-family: 'Phudu', sans-serif;
     font-size: 140px;
     margin: 0;
     font-weight: 900;
@@ -268,7 +270,7 @@ html[data-theme='dark'] .hero-section {
     color: white;
     border-radius: 999px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: normal;
     transition: background-color 0.3s;
 }
 
@@ -364,7 +366,7 @@ html[data-theme='dark'] .contact-hero {
 }
 
 .contact-left {
-    color: black;
+    color: var(--text-color);;
     max-width: 1000px;
 }
 
@@ -385,7 +387,8 @@ html[data-theme='dark'] .contact-hero {
 
 .contact-right {
     flex: 1;
-    max-width: 900px;
+    max-width: 750px;
+    margin-bottom: 100px;
 }
 
 /*======== Base Responsive Rules ========*/
@@ -397,9 +400,8 @@ img {
   }
   
   /* Ensure hero text scales */
-  .hero-text h1,
-  .contact-left h1 {
-    font-size: clamp(24px, 6vw, 64px);
+  .hero-text h1 {
+    font-size: clamp(124px, 6vw, 64px);
   }
   
   .hero-text p,
