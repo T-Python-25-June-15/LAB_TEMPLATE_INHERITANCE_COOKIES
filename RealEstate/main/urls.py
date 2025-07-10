@@ -7,6 +7,5 @@ urlpatterns = [
     path('', views.home_page, name="home_page"),
     path('properties/', views.properties_page, name= 'properties_page'),
     path('contact/', views.contact_page, name= 'contact_page'),
-    path('dark/mood/', views.dark_mood_view, name= 'dark_mood_view'),
-    path('light/mood/', views.light_mood_view, name= 'light_mood_view'),
+    path('mode/<mode>', views.mode_view, name= 'mode_view'),
 ]

@@ -21,13 +21,11 @@ def contact_page(request:HttpRequest):
 
 
 
-def dark_mood_view(request:HttpRequest):
+def mode_view(request:HttpRequest, mode):
     response = redirect(request.GET.get('next', '/'))
-    response.set_cookie("mood", "dark")
-    return response
+    if mode == "dark":
+        response.set_cookie("mood", "dark")
+    elif mode == "light":
+        response.set_cookie("mood", "light", max_age= - 3600)
 
-
-def light_mood_view(request:HttpRequest):
-    response = redirect(request.GET.get('next', '/'))
-    response.set_cookie("mood", "light", max_age= - 3600)
     return response
