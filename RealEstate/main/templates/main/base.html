@@ -11,7 +11,7 @@
 </head>
 
 
-<body class="{% if request.COOKIES.theme == 'dark' %}dark{% endif %}{% block body_class %}{% endblock %}">
+<body class="{% if request.COOKIES.theme == 'dark' %}dark {% endif %}{% block body_class %}{% endblock %}">
     <nav>
         <div class="logo"><a href="{% url 'main:home_view' %}">HOME</a></div>
         <div class="nav-links">
