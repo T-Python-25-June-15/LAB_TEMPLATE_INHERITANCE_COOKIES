@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <title>RealEstate</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Phudu&display=swap" rel="stylesheet">
+
+    <!-- Google Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+<header class="header-container">
+    <!-- HOME خارج كل شيء -->
+    <div class="nav-home-label">HOME</div>
+
+    <div class="nav-wrapper">
+        <!-- الشريط الأبيض -->
+        <nav class="nav">
+            <ul class="nav-links">
+                <li><a href="{% url 'main:home_view' %}">Home</a></li>
+                <li><a href="{% url 'main:properties_view' %}">Properties</a></li>
+                <li><a href="{% url 'main:services_view' %}">Services</a></li>
+                <li><a href="{% url 'main:about_view' %}">About</a></li>
+                <li><a href="{% url 'main:contact_view' %}">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!--  خارج الشريط الأبيض -->
+         <div class="nav-actions-fixed">
+        <span class="material-icons">person</span>
+        <span>Sign up</span>
+        <span class="material-icons theme-toggle" id="light">light_mode</span>
+        <span class="material-icons theme-toggle" id="dark">dark_mode</span>
+        <a href="{% url 'main:normal_font_view' %}" class="font-btn">A</a>
+        <a href="{% url 'main:large_font_view' %}" class="font-btn">A+</a>
+     </div>
+    </div>
+</header>
+
+
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <!-- Optional Footer -->
+    </footer>
+
+    <script>
+        // Dark Mode Toggle Script
+        const root = document.documentElement;
+        document.getElementById("light").onclick = () => root.setAttribute("data-theme", "light");
+        document.getElementById("dark").onclick = () => root.setAttribute("data-theme", "dark");
+    </script>
+</body>
+</html>
+
+
+
