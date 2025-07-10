@@ -1,0 +1,33 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+
+{% if 'mode' in request.COOKIES %}
+  <img class="background-img" src="{% static 'images/skyscraper-dark.jpg' %}" alt="">
+{% else %}
+  <img class="background-img" src="{% static 'images/skyscraper.jpeg' %}" alt="">
+{% endif %}
+
+
+<section class="index-section">
+    <div class="index-container">
+        <span class="animation" >FIND YOUR DREAMS</span>
+        <p>
+            Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties.
+            Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties.
+        </p>
+        <a href="#" class="explore-btn">Explore Properties</a>
+    </div>
+
+    <div class="category-bar">
+        <div class="category house"><span class="material-symbols-outlined">house</span><p>ALL</p></div>
+        <div class="category factory"><span class="material-symbols-outlined">factory</span><p>PROPERTIES</p></div>
+        <div class="category hotel"><span class="material-symbols-outlined">hotel</span><p>HOTEL</p></div>
+        <div class="category villa"><span class="material-symbols-outlined">villa</span><p>VILLA</p></div>
+    </div>
+</section>
+{% endblock %}
