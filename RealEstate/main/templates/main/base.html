@@ -1,16 +1,51 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" {% if 'mode' in request.COOKIES %} class="dark" {% endif %}>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- import font form google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <!-- end import -->
     <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
-    <title>{% block title %} {% endblock %}</title>
+    <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
+    <div class="wrapper">
+        <nav>
+            
+            <a href="{%url 'main:home_view'%}" class="logo">HOME</a>
 
-    {% block content %}
-    {% endblock %}
+            <div class="middle-nav">
+                <a href="{%url 'main:home_view'%}">Home</a>
+                <a href="{%url 'main:propeties_view'%}">Properties</a>
+                <a href="">Services</a>
+                <a href="">About</a>
+                <a href="{%url 'main:contact_view'%}">Contact</a>
+            </div>
+
+            <div class="right-nav">
+                <a href="" class="signup-link"><span class="material-symbols-outlined">account_circle</span>Sign up</a>
+                <a href="{% url 'main:light_mode_view' %}"><span class="material-symbols-outlined lighticon {% if not 'mode' in request.COOKIES %}active-icon{% endif %}">clear_day</span></a>
+                <a href="{% url 'main:dark_mode_view' %}"><span class="material-symbols-outlined darkicon {% if 'mode' in request.COOKIES %}active-icon{% endif %}">bedtime</span></a>
+
+            </div>
+            
+
+        </nav> <!-- End Nav -->
+        
+        
+        
+
+        <main>
+            {% block content %}
+            {% endblock %}
+        </main>
+    </div>
+
     
 </body>
 </html>
