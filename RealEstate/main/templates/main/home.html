@@ -1,0 +1,39 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+{% block body_class %}home-page{% endblock %}
+{% block content %}
+<section class="hero">
+    <div class="home-content">
+        <h1>FIND YOUR <br><strong>DREAMS</strong></h1>
+        <p>Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties.</p>
+        <a href="{% url 'main:properties_view' %}" class="explore-btn">Explore Properties</a>
+    </div>
+    <div class="filters">
+        <div class="filter-option green">
+            <div class="icon-circle">
+                <span class="material-symbols-outlined">home</span>
+            </div>
+            <p>ALL</p>
+        </div>
+        <div class="filter-option orange">
+            <div class="icon-circle">
+                <span class="material-symbols-outlined">location_city</span>
+            </div>
+            <p href="{% url 'main:properties_view' %}">PROPERTIES</p>
+        </div>
+        <div class="filter-option pink">
+            <div class="icon-circle">
+                <span class="material-symbols-outlined">hotel</span>
+            </div>
+            <p>HOTEL</p>
+        </div>
+        <div class="filter-option blue">
+            <div class="icon-circle">
+                <span class="material-symbols-outlined">villa</span>
+            </div>
+            <p>VILLA</p>
+        </div>
+    </div>       
+</section>
+{% endblock %}
