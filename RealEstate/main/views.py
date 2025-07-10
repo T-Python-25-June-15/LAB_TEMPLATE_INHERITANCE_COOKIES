@@ -6,19 +6,19 @@ from django.http import HttpRequest, HttpResponse
 def page_view(request:HttpRequest):
     r = render(request, 'main/homepage.html')
     if not 'mode' in request.COOKIES:
-        r.set_cookie('mode', 'light', max_age=60*60*24)
+        r.set_cookie('mode', 'light', max_age=60*60*24*7)
     return r
 
 def contact_view(request:HttpResponse):
     r = render(request, 'main/contact.html')
     if not 'mode' in request.COOKIES:
-        r.set_cookie('mode', 'light', max_age=60*60*24)
+        r.set_cookie('mode', 'light', max_age=60*60*24*7)
     return r
 
 def properties_view(request:HttpResponse):
     r = render(request, 'main/properties.html')
     if not 'mode' in request.COOKIES:
-        r.set_cookie('mode', 'light', max_age=60*60*24)
+        r.set_cookie('mode', 'light', max_age=60*60*24*7)
     return r
 
 def change_mode(request:HttpRequest):
