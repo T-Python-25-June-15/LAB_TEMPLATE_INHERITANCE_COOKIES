@@ -16,34 +16,15 @@
 <div id="properties">
     <h1>OUR PROPERTIES</h1>
     <div class="grid_container">
+        {% for propertie in properties %}
         <div class="box">
-            <img src="{% static 'img/villa1.jpg' %}" alt="">
-            <h3>Villa Modern in malqa</h3>
+            <img src="../../static/img/{{propertie.image}}" alt="">
+            <h3>{{propertie.title}}</h3>
             <div>
                 <a href="">more</a>
             </div>
         </div>
-        <div class="box">
-            <img src="{% static 'img/villa2.jpg' %}" alt="">
-            <h3>Great home for you im rimal</h3>
-            <div>
-                <a href="">more</a>
-            </div>
-        </div>
-        <div class="box">
-            <img src="{% static 'img/villa3.jpg' %}" alt="">
-            <h3>Villa with 8 bedrooms in swedey</h3>
-            <div>
-                <a href="">more</a>
-            </div>
-        </div>
-        <div class="box">
-            <img src="{% static 'img/villa4.jpg' %}" alt="">
-            <h3>Villa Modern in malqa</h3>
-            <div>
-                <a href="">more</a>
-            </div>
-        </div>
+        {% endfor %}
 
     </div>
 </div>
