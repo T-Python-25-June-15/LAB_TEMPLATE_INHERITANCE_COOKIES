@@ -31,8 +31,8 @@
             <div class="bar-icons">
                 <a href=""><span class="material-symbols-outlined">person</span></a>
                 <a href="">Sign up</a>
-                <a class="sun-icon" href="{% url 'main:light_mood_view' %}"><span class="material-symbols-outlined">sunny</span></a>
-                <a class="moon-icon" href="{% url 'main:dark_mood_view' %}"><span class="material-symbols-outlined">bedtime</span></a>
+                <a class="sun-icon" href="{% url 'main:light_mood_view' %}?next={{request.path}}"><span class="material-symbols-outlined">sunny</span></a>
+                <a class="moon-icon" href="{% url 'main:dark_mood_view' %}?next={{request.path}}"><span class="material-symbols-outlined">bedtime</span></a>
             </div>
         </nav>
 
