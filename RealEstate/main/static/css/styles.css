@@ -23,13 +23,11 @@ main {
 }
 
 .footer {
-  flex-shrink: 0;  
   width: 100%;
-  min-height: 100px;
+  height: 60px;
   background-color: #d0ccc2;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 
@@ -115,7 +113,7 @@ main {
 
 .home {
   background: url("/static/images/skyscraper.jpeg") center/cover no-repeat;
-  min-height: calc(100vh - 100px); 
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -297,18 +295,16 @@ margin: 5px;
 .contact-section {
   display: flex;
   justify-content: space-between;
-  padding: 3rem;
-  background: url("/static/images/email.jpg") repeat;
+  background: url("/static/images/email.jpg") center;
   background-size: cover;
   flex-direction: row;
-  padding-top: 120px;
-  padding-left: 120px;
-  padding-right: 90px;
+  height: 100vh;
 }
 
 .contact-info {
-  max-width: 40%;
-   margin-top: 60px;
+   max-width: 40%;
+   margin-top: 200px;
+   margin-left: 120px;
 }
 
 .contact-info h2 {
@@ -325,17 +321,12 @@ margin: 5px;
   text-decoration: underline;
 }
 
-.euro-image {
-  width: 80px;
-  margin-top: 2rem;
-}
 
 .map-container {
   width: 55%;
-  border-radius: 10px;
+  border-radius: 18px;
   overflow: hidden; 
-  margin-top: 60px;
-  border: 1px solid #ccc; 
+  margin-top: 190px;
 }
 .mode-icon {
   font-size: 20px;
@@ -410,7 +401,7 @@ html.dark body {
 
 html.dark .home {
   background: url("/static/images/skyscraper-dark.jpg") center/cover no-repeat !important;
-  height: 80vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -489,13 +480,12 @@ html.dark .mode .dark-icon {
 
 html.dark .footer {
   background-color:#474646 ; 
-  min-height: 100px;
   width: 100%;
+  height: 60px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
 }
+
 html.dark .property {
   background-color: #404040; 
   color: #ffffff; 
