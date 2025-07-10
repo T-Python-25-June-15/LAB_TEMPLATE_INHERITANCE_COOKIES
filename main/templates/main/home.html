@@ -1,0 +1,35 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="hero" style="background-image: url('{% static 'images/skyscraper.jpeg' %}');">
+    <div class="hero-content">
+        <h1>FIND YOUR <br> DREAMS</h1>
+        <p>
+            Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties.
+            Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties.
+        </p>
+        <a href="{% url 'main:properties_view' %}" class="explore-btn">Explore Properties</a> 
+    </div>
+</div>
+
+<div class="category-bar">
+    <div class="category">
+        <span class="material-icons green">home</span>
+        <p>ALL</p>
+    </div>
+    <div class="category">
+        <span class="material-icons orange">location_city</span>
+        <p>PROPERTIES</p>
+    </div>
+    <div class="category">
+        <span class="material-icons purple">hotel</span>
+        <p>HOTEL</p>
+    </div>
+    <div class="category">
+        <span class="material-icons blue">villa</span>
+        <p>VILLA</p>
+    </div>
+</div>
+{% endblock %}

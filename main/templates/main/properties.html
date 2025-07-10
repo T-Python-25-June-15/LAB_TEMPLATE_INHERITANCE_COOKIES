@@ -1,0 +1,21 @@
+
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="properties-page">
+    <h2>OUR PROPERTIES</h2>
+
+    <div class="property-list">
+        {% for p in properties %}
+        <div class="property-card">
+            <img src="{% static 'images/'|add:p.image %}" alt="{{ p.title }}">
+            <div class="property-info">
+                <h3>{{ p.title|upper }}</h3>
+                <a href="#" class="more-btn">more</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
