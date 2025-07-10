@@ -6,6 +6,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{% block title %}Real Estate{% endblock %}</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Phudu:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body class="{% if background == 'black' %}dark-mode{% endif %}">
@@ -26,9 +28,15 @@
         <a href="#" class="signup">Sign up</a>
         <form action="{% url 'main:toggle_background' %}" method="post" class="theme-toggle-form">
           {% csrf_token %}
-          <button type="submit" value="white" name="button" class="theme-btn">Light</button>
-          <button type="submit" value="black" name="button" class="theme-btn">Black</button>
-        </form>
+
+  <button type="submit" value="white" name="button" class="theme-btn">
+    <i class="fas fa-sun"></i> Light
+  </button>
+
+  <button type="submit" value="black" name="button" class="theme-btn">
+    <i class="fas fa-moon"></i> Dark
+  </button>
+ </form>
       </div>
     </header>
 
