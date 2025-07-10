@@ -1,0 +1,32 @@
+
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block tag %}
+  properties_view
+{% endblock tag %}
+
+{% block links %}
+      <link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+{% endblock links %}
+
+{% block body %}
+
+<div id="properties">
+    <h1>OUR PROPERTIES</h1>
+    <div class="grid_container">
+        {% for propertie in properties %}
+        <div class="box">
+            <img src="../../static/img/{{propertie.image}}" alt="">
+            <h3>{{propertie.title}}</h3>
+            <div>
+                <a href="">more</a>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+</div>
+
+{% endblock body %}

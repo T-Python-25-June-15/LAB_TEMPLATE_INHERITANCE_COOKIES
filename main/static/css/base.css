@@ -1,0 +1,467 @@
+
+:root {
+    --bg_color: whitesmoke;
+    --font_color: black;
+    --bg_img: url('../img/skyscraper.jpeg');
+    --shadow_color: #cbcbcb;
+}
+
+
+.dark_theme {
+  --bg_color: #171717;
+  --font_color: whitesmoke;
+  --bg_img: url('../img/skyscraper-dark.jpg');
+  --shadow_color: rgb(14, 14, 14);
+}
+
+.contact_page {
+    --bg_img: url('../img/email.jpg');
+    /* --font_color: black; */
+}
+
+.properties_view {
+    --bg_img: none;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    color: var(--font_color);
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    background-color: #d4d4d4;
+    background-image: var(--bg_img);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+header {
+    width: 80%;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 80px;
+}
+
+header h1 {
+    font-weight: 1000;
+    font-size: 40px;
+    width: 25%;
+    transition: all 0.2s 0.2s ease-in-out ;
+}
+
+header h1:hover {
+    color: red;
+    transform: scale(1.15) translateX(10px);
+}
+
+header .links {
+    height: 90px;
+    width: 50%;
+    background-color: var(--bg_color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    border-radius: 50px;
+    align-self: center;
+}
+
+header .links a {
+    text-decoration: none;
+    color: var(--font_color);
+    padding: 10px;
+    transition: all 0.2s 0.2s ease-in-out ;
+}
+
+header .links a:hover {
+    color: red;
+    transform: scale(1.15);
+}
+
+header .icons {
+    display: flex;
+    gap: 2px;
+    width: 25%;
+    justify-content: end;
+}
+
+header .icons a {
+    text-decoration: none;
+    color: var(--font_color);
+    padding: 10px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .icons .active {
+    border-radius: 50%;
+    background-color: whitesmoke;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: #171717;
+    color: aliceblue;
+    margin-top: 100px;
+}
+
+/* end base style */
+
+
+
+/* start index style  */
+
+/* <div class="container">
+    <span>FIND YOUR DREAMS</span>
+    <p>Our catalog will suprise you. Our catalog will suprise you. Our catalog will suprise you. Our catalog will suprise you. Our catalog will suprise you. Our catalog will suprise you.s</p>
+    <a href="">Explore Prooerties</a>
+    <div class="container_footer">
+        <a href="">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M234-276q51-39 114-61.5T480-360q69 0 132 22.5T726-276q35-41 54.5-93T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 59 19.5 111t54.5 93Zm246-164q-59 0-99.5-40.5T340-580q0-59 40.5-99.5T480-720q59 0 99.5 40.5T620-580q0 59-40.5 99.5T480-440Zm0 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q53 0 100-15.5t86-44.5q-39-29-86-44.5T480-280q-53 0-100 15.5T294-220q39 29 86 44.5T480-160Zm0-360q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm0-60Zm0 360Z"/></svg>
+            <span>Home</span>
+        </a>
+        <a href="">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M234-276q51-39 114-61.5T480-360q69 0 132 22.5T726-276q35-41 54.5-93T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 59 19.5 111t54.5 93Zm246-164q-59 0-99.5-40.5T340-580q0-59 40.5-99.5T480-720q59 0 99.5 40.5T620-580q0 59-40.5 99.5T480-440Zm0 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q53 0 100-15.5t86-44.5q-39-29-86-44.5T480-280q-53 0-100 15.5T294-220q39 29 86 44.5T480-160Zm0-360q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm0-60Zm0 360Z"/></svg>
+            <span>Home</span>
+        </a>
+        <a href="">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M234-276q51-39 114-61.5T480-360q69 0 132 22.5T726-276q35-41 54.5-93T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 59 19.5 111t54.5 93Zm246-164q-59 0-99.5-40.5T340-580q0-59 40.5-99.5T480-720q59 0 99.5 40.5T620-580q0 59-40.5 99.5T480-440Zm0 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q53 0 100-15.5t86-44.5q-39-29-86-44.5T480-280q-53 0-100 15.5T294-220q39 29 86 44.5T480-160Zm0-360q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm0-60Zm0 360Z"/></svg>
+            <span>Home</span>
+        </a>
+        <a href="">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M234-276q51-39 114-61.5T480-360q69 0 132 22.5T726-276q35-41 54.5-93T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 59 19.5 111t54.5 93Zm246-164q-59 0-99.5-40.5T340-580q0-59 40.5-99.5T480-720q59 0 99.5 40.5T620-580q0 59-40.5 99.5T480-440Zm0 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q53 0 100-15.5t86-44.5q-39-29-86-44.5T480-280q-53 0-100 15.5T294-220q39 29 86 44.5T480-160Zm0-360q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm0-60Zm0 360Z"/></svg>
+            <span>Home</span>
+        </a>
+    </div>
+</div>
+<footer>
+    test
+</footer> */
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    min-height: 70vh;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 20px;
+    width: 80%;
+    position: relative;
+    margin-top: 70px;
+    padding: 0;
+    border-bottom: 5px var(--bg_color) solid;
+}
+
+.container > span {
+    font-size: 80px;
+    color: var(--font_color);
+    display: block;
+    width: 50%;
+    height: auto;
+    font-weight: 800;
+
+    position: relative;
+    animation-name: header;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+
+.container p {
+    width: 50%;
+}
+
+@keyframes header {
+    0% {
+        transform: scale(0.1);
+        top: -127px;
+        right: -56px;
+    }
+
+    25% {
+        transform: scale(0.2);
+        top: -112px;
+        right: 30px;
+    }
+
+    50% {
+        transform: scale(0.3);
+        top: -72px;
+        right: 127px;
+    }
+
+    75% {
+        transform: scale(0.4);
+        top: -32px;
+        right: 174px;
+    }
+
+    100% {
+        transform: scale(1);
+        top: 0;
+        right: 0;
+    }
+}
+
+.container a {
+    padding: 10px;
+    width: 15%;
+    height: auto;
+    color: var(--font_color);
+    background-color: var(--bg_color);
+    transition: all 0.3s 0.5s ease-in-out;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: small;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.container a:hover {
+    color: red;
+    transform: scale(1.1);
+    box-shadow: 3px 3px 5px 2px var(--shadow_color);
+}
+
+.container .container_footer {
+    position: absolute;
+    height: 120px;
+    bottom: -60px;
+    right: 50%;
+    transform: translateX(50%);
+    background-color: var(--bg_color);
+    /* box-shadow: 1px 1px 5px 5px var(--shadow_color); */
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    gap: 20px;
+}
+
+
+.container .container_footer a span{
+    font-size: small;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.container .container_footer a{
+    font-size: small;
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container .container_footer a svg {
+    padding: 5px;
+    border-radius: 50%;
+}
+/* 
+.container .container_footer a:first-child svg {
+    background-color: lightgreen;
+}
+
+.container .container_footer a:last-child svg {
+    background-color: lightblue;
+}
+.container .container_footer a:nth-child(2) svg {
+    background-color: lightgoldenrodyellow;
+}
+
+.container .container_footer a:nth-child(3) svg {
+    background-color: lightpink;
+} */
+
+/* end index page  */
+
+
+/* start contact page  */
+/* 
+<div id="contact">
+    <div>
+        <h1>CONTACT US</h1>
+
+        <h3>TELEPHONE: <a href="">+96657263883764</a></h3>
+        <h3>EMAIL: <a href="">info@realesstate.com</a></h3>
+
+        <h3>ADDRESS:</h3>
+        <h6>
+            ANAS BIN MALIK: RIYADH
+            <br>
+            BUILDING W-112
+            <br>
+            SAUDI ARABIA
+        </h6>
+    </div>
+    <div class="google_map">
+        google
+    </div>
+</div> */
+
+#contact {
+    width: 80%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    height: 70vh;
+    margin-top: 50px;
+}
+
+#contact div:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 20px;
+    width: 40%;
+    font-size: 1.2em;
+}
+
+#contact div:first-child a {
+    color: blue;
+}
+
+#contact div:first-child h1 {
+    margin-bottom: 50px;
+}
+
+#contact div:last-child {
+    width: 60%;
+    height: auto;
+}
+
+#contact div:last-child iframe {
+    width: 100%;
+    border-radius: 20px;
+}
+
+
+/* end contact  */
+
+
+/* strat properties  */
+
+/* 
+<div id="properties">
+    <h1>OUR PROPERTIES</h1>
+    <div class="grid_container">
+        <div class="box">
+            <img src="" alt="">
+            <h3>Villa Modern in malqa</h3>
+            <div>
+                <a href="">more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="" alt="">
+            <h3>Villa Modern in malqa</h3>
+            <div>
+                <a href="">more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="" alt="">
+            <h3>Villa Modern in malqa</h3>
+            <div>
+                <a href="">more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="" alt="">
+            <h3>Villa Modern in malqa</h3>
+            <div>
+                <a href="">more</a>
+            </div>
+        </div>
+
+    </div>
+</div> */
+
+#properties {
+    margin-top: 50px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 20px;
+}
+
+#properties .grid_container {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+#properties .grid_container .box {
+    width: 100%;
+    border-radius: 20px;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 1px 1px 5px lightgray;
+    color: black;
+    transition: all 0.3s ease-in-out;
+}
+
+#properties .grid_container .box:hover {
+    transform: scale(1.05);
+}
+
+#properties .grid_container .box img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px 20px 0px 0px;
+}
+
+#properties .grid_container .box h3 {
+    margin: 20px;
+}
+
+#properties .grid_container .box div {
+    text-align: end;
+    padding: 20px;
+}
+
+#properties .grid_container .box div a {
+    padding: 10px;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    transition: all 0.3s 0.5s ease-in-out;
+}
+
+#properties .grid_container .box div a:hover {
+    transform: scale(1.05) translateX();
+    color: red;
+}
