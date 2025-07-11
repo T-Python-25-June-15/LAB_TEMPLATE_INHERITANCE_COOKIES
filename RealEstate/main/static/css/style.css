@@ -8,7 +8,7 @@
 }
 body {
     font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;    
-    overflow-x: hidden;
+    overflow-x: hidden; 
     min-height: 120vh;
     position: relative; 
     background-color: rgb(222, 222, 222);
@@ -46,19 +46,21 @@ html.dark body {
 /* Override for Properties page */
 .wrap.no-background {
     background-image: none;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 html.dark .wrap.no-background{
     background-image: none;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 main .pro-page {
-    display: flexbox;
-    flex-direction: row;
-    margin-top: 2.5rem;
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin-top: 8rem;
+    width: 100%;
     
     
 }
@@ -77,8 +79,10 @@ html.dark .wrap.contact_background {
 
 main .pro-page h3 {
     font-size: 2rem;
-    font-weight: 600;  
-    
+    font-weight: 400;
+    text-align: center;    
+    padding-left: 3rem; 
+
 }
 
 .contact-page {
@@ -222,6 +226,8 @@ html.dark .bar {
   display: inline-block; 
   
 }
+
+
 
 html.dark .bar a {
     color: white;
@@ -556,8 +562,8 @@ html.dark .moon-icon {
     flex-direction: row;
     gap: 2rem;
     flex-wrap: wrap;
-    margin-top: 2rem;
-    padding-top: 25rem;   
+    padding-top: 2rem;  
+    padding-left: 3rem; 
 
 }
 
