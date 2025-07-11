@@ -1,6 +1,12 @@
 from django.shortcuts import redirect, render
-
+from django.http import HttpRequest, HttpResponse
 # Create your views here.
+
+
+def base_view(request):
+    
+    
+    return render(request, "main/base.html", )
 
 def home_view(request):
 
@@ -10,31 +16,10 @@ def home_view(request):
     response = render(request, "main/home.html", {"background": cookie_value})
     return response
 
-def toggle_background(request):
-
-
-    background = request.POST.get('button')
-
-    response = render(request, "main/home.html", {"background": background})
-    response.set_cookie("background", background)
-    return response
-
-
 def contact_view(request):
-    
     
     return render(request, "main/contact.html", )
 
-def home_dark_view(request):
-    
-    
-    return render(request, "main/home_dark.html", )
-
-
-def dark_base_view(request):
-    
-    
-    return render(request, "main/dark_base.html", )
 
 def properties_view(request):
     properties = [
@@ -48,9 +33,9 @@ def properties_view(request):
     }
     return render(request, 'main/properties.html', context)
 
-
-def base_view(request):
-    
-    
-    return render(request, "main/base.html", )
-
+def dark_mode(request: HttpRequest, mode: str):
+    if mode not in ['light', 'dark']:
+        mode = 'light'
+    response = redirect(request.META.get('HTTP_REFERER', '/'))
+    response.set_cookie('mode', mode, max_age=60*60*24*30)
+    return response    

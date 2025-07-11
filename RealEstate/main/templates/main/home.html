@@ -1,42 +1,39 @@
-{% extends 'main/base.html' %}
+{% extends "main/base.html" %}
+{% load static %}
+
 
 {% block title %}Home{% endblock %}
 
+{% block fileStyle %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+
 {% block content %}
-<div class="main-section {% if background == 'black' %}dark-bg{% else %}light-bg{% endif %}">
-  <h1 class="fade-in">FIND YOUR <br> DREAMS</h1>
-  <p>
-    Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties.
-    Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties.
-  </p>
-  <a href="#" class="btn">Explore Properties</a>
+
+
+<div class="home-main">
+    <h1>Find Your Dreams</h1>
+    <p>Our catalog will surprise you. Rather, discover an unprecendented offers of luxury properties.
+        Our catalog will surprise you. Rather, discover an unprecendented offers of luxury properties.</p>
+    <a href="{% url 'main:properties_view' %}">Explore Properties</a>
 </div>
 
-<div class="filter-bar {% if background == 'black' %}dark-filter-bar{% else %}light-filter-bar{% endif %}">
-  <a href="">
-    <div class="filter-option {% if background == 'black' %}dark-filter-option{% else %}light-filter-option{% endif %}">
-      <div class="icon">🏠</div>
-      <p>ALL</p>
+<div class="home-footer">
+    <div>
+        <a href="" class="home-a"><span class="material-symbols-outlined" id="home">home</span>All</a>
     </div>
-  </a>
-  <a href="{% url 'main:properties_view' %}">
-    <div class="filter-option {% if background == 'black' %}dark-filter-option{% else %}light-filter-option{% endif %}">
-      <div class="icon">🏢</div>
-      <p>PROPERTIES</p>
+    <div>
+        <a href="{% url 'main:properties_view' %}" class="factory-a"><span class="material-symbols-outlined" id="factory">factory</span>Properties</a>
     </div>
-  </a>
-  <a href="">
-    <div class="filter-option {% if background == 'black' %}dark-filter-option{% else %}light-filter-option{% endif %}">
-      <div class="icon">🛏️</div>
-      <p>HOTEL</p>
+    <div>
+        <a href="" class="hotel-a"><span class="material-symbols-outlined" id="hotel">hotel</span>Hotel</a>
     </div>
-  </a>
-  <a href="">
-    <div class="filter-option {% if background == 'black' %}dark-filter-option{% else %}light-filter-option{% endif %}">
-      <div class="icon">🏡</div>
-      <p>VILLA</p>
+    <div>
+        <a href="" class="villa-a"><span class="material-symbols-outlined" id="villa">villa</span>Villa</a>
     </div>
-  </a>
 </div>
+
+
 
 {% endblock %}
