@@ -8,12 +8,10 @@
 
 
 .dark_theme {
-  --bg_color: #171717;
-  --font_color: whitesmoke;
-  --bg_img: url('../imgs/skyscraper-dark.jpg');
-  --shadow_color: rgb(14, 14, 14);
-}
 
+    background-color: #121212;  
+    color: white;
+}
 .contact_page {
     --bg_img: url('../imgs/email.jpg');
 }
