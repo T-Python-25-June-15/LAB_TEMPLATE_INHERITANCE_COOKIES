@@ -1,21 +1,19 @@
-{% extends 'main/base.html' %}
-{% load static %}
-
-{% block title %}Properties - RealEstate{% endblock %}
-
-
-{% block content %}
+{% extends 'main/base.html' %} {% load static %} {% block title %}Properties -
+RealEstate{% endblock %} {% block content %}
 <section class="properties-section">
   <h2>OUR PROPERTIES</h2>
   <div class="property-cards">
     {% for property in properties %}
-      <div class="property-card">
-        <img src="{% static 'images/' %}{{ property.image }}" alt="{{ property.title }}">
-        <div class="card-details">
-          <h3>{{ property.title|upper }}</h3>
-          <a href="#" class="more-btn">more</a>
-        </div>
+    <div class="property-card">
+      <img
+        src="{% static 'images/' %}{{ property.image }}"
+        alt="{{ property.title }}"
+      />
+      <div class="card-details">
+        <h3>{{ property.title|upper }}</h3>
+        <a href="#" class="more-btn">more</a>
       </div>
+    </div>
     {% endfor %}
   </div>
 </section>

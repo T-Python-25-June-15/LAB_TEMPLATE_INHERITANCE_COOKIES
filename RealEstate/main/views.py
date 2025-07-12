@@ -16,9 +16,9 @@ def properties_view(request: HttpRequest):
 def contact_view(request: HttpRequest):
     return render(request, 'main/contact.html')
 
-def toggle_theme(request):
+def toggle_theme(request: HttpRequest):
     current_theme = request.COOKIES.get("theme", "light")
     new_theme = "dark" if current_theme == "light" else "light"
     response = HttpResponseRedirect(request.META.get("HTTP_REFERER", "/"))
-    response.set_cookie("theme", new_theme, max_age=60*60*24*365)  # 1 year
+    response.set_cookie("theme", new_theme, max_age=60*60*24)
     return response
