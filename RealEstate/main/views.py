@@ -23,6 +23,7 @@ def properties_view(request: HttpRequest):
 def contact_view(request: HttpRequest):
     mode = request.COOKIES.get('mode', 'light')
     return render(request, "main/contact.html",{'mode': mode})
+
 def dark_mode_view(request):
     next_url = request.GET.get('next', 'main:home')
     response = redirect(next_url)
