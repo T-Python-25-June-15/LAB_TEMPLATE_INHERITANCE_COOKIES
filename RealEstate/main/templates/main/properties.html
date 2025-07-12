@@ -1,0 +1,23 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block body_class %}
+    {% if 'mode' in request.COOKIES %} 
+        properties_page_dark 
+    {% else %}
+        properties_page
+    {% endif %}
+{% endblock %}
+{% block content %}
+<h4>OUR PROPERTIES</h4>
+<div class="properties_wapper">
+    {% for propertie in properties %}
+        <div class="{% if not 'mode' in request.COOKIES %} propertie_1 {% else %} propertie_1_dark {% endif %}">
+            <img src="{% static 'css/images/'|add:propertie.image %}" alt="{{propertie.image}}">
+            <p>{{propertie.title}}</p>
+            <div class="btn_container">
+                <button class="btn">more</button>
+            </div>
+        </div>
+    {% endfor %}    
+</div>
+{% endblock %}

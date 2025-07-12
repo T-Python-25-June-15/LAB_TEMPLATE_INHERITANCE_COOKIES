@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Real Estate</title>
+</head>
+<body class="{% block body_class %}{% endblock %}">
+    <div class="{% if not 'mode' in request.COOKIES %} wapper {% else %} wapper_dark {% endif %}">
+        <nav>
+            <a href="{% url 'main:home_view'%}"><h1 class="{% if not 'mode' in request.COOKIES %} home {% else %} home_dark {% endif %}">HOME</h1></a>
+            <div class="{% if not 'mode' in request.COOKIES %} middle {% else %} middle_dark {% endif %}">
+                <a href="{% url 'main:home_view' %}"><span>Home</span></a>
+                <a href="{% url 'main:properties_view' %}"><span>Properties</span></a>
+                <span>Services</span>
+                <span>About</span>
+                <a href="{% url 'main:contact_view' %}"><span>Contact</span></a>
+            </div>
+            <div class="upper_right">
+                <span class="material-symbols-outlined {% if 'mode' in request.COOKIES %} dark_mode_icon {% endif %}">person</span>
+                <span>Sign up</span>
+                <a href="{% url 'main:light_mode_view' %}"><span class="material-symbols-outlined {% if not 'mode' in request.COOKIES %} light_mode {% else %} dark_mode_icon {% endif %}">light_mode</span></a>
+                <a href="{% url 'main:dark_mode_view' %}"><span class="material-symbols-outlined {% if 'mode' in request.COOKIES %} dark_mode  {% endif %}">dark_mode</span></a>
+            </div>
+        </nav>
+        <main>
+            {% block content %}
+
+            {% endblock %}
+        </main>
+    </div>
+        <div class="footer_container">
+            <div class="{% if not 'mode' in request.COOKIES %} grey {% else %} grey_dark {% endif %}">
+                <div class="footer_inner">
+                    Real a Estate.
+                </div>
+            </div>
+        </div>
+</body>
+</html>

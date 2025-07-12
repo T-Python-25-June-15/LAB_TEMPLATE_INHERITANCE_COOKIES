@@ -1,0 +1,36 @@
+{% extends 'main/base.html' %}
+{% block body_class %} 
+    {% if 'mode' in request.COOKIES %} 
+        home_page_dark
+    {% else %}
+        home_page
+    {% endif %}
+{% endblock%}
+{% block content %}
+    <h1 class="find_your_dreams" id="animate-text">FIND YOUR <br>DREAMS</h1>
+    <span>Our catalog will suprise you. Rather, discover an unprecendented offers of luxury properties. Our <br> catalog will suprise you. Rather, discover an unprecendented offers of luxury properties.</span>
+    <br>
+    <form action="{% url 'main:properties_view' %}">
+        <button class="btn">Expolorties Properties</button>
+    </form>
+    <div>
+        <nav class="{% if not 'mode' in request.COOKIES %} buttom {% else %} buttom_dark {% endif %} ">
+            <figure>
+                <span class="material-symbols-outlined" id="house">house</span>
+                <figcaption class="all">ALL</figcaption>
+            </figure>
+            <figure>
+                <span class="material-symbols-outlined" id="factory">factory</span>
+                <figcaption class="properties">PROPERTIES</figcaption>
+            </figure>
+            <figure>
+                <span class="material-symbols-outlined" id="hotel">hotel</span>
+                <figcaption class="hotel">HOTEL</figcaption>
+            </figure>
+            <figure>
+                <span class="material-symbols-outlined" id="villa">villa</span>
+                <figcaption class="villa">VILLA</figcaption>
+            </figure>
+        </nav>
+    </div>
+{% endblock %}
