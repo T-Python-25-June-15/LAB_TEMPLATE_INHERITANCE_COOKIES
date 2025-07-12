@@ -60,7 +60,14 @@
     font-weight: bold;
     letter-spacing: 2px;
     text-decoration: none;
+    display: inline-block;
+    transition: transform 0.2s ease-in-out;
 }
+
+.logo:hover {
+  transform: scale(1.2); /* Zoom in slightly */
+}
+
 
 .left-section a:hover {
     color: #e33131;
@@ -89,10 +96,13 @@
     font-weight: 500;
     font-size: 16px;
     transition: color 0.3s;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
 }
 
 .navbar a:hover {
     color: #e33131;
+    transform: scale(1.2); /* Zoom in slightly */
 }
 
 .navbar:hover {
@@ -113,14 +123,14 @@
   }
   
   .auth-icon {
-    width: 18px;
-    height: 18px;
+    width: 28px;
+    height: 28px;
   }
   
   .signup {
     text-decoration: none;
     font-weight: 500;
-    color: black;
+    color: var(--text-color);
     cursor: pointer;
   }
   
@@ -169,7 +179,7 @@ footer {
 .footer-pills {
     position: fixed;
     bottom: 40px;
-    left: 50%;
+    left: 49%;
     transform: translateX(-50%);
     z-index: 1000;
     width: auto;
@@ -192,6 +202,9 @@ footer {
     pointer-events: auto;
 }
 
+.pill-item :hover {
+  transform: scale(1.2);
+}
 
 .pill-item {
     text-align: center;
@@ -207,6 +220,7 @@ footer {
     margin: 0 auto 8px;
     font-size: 20px;
     color: white;
+    transition: transform 0.2s ease-in-out;
 }
 
 .pill-label {
@@ -219,6 +233,8 @@ footer {
     width: 22px;
     height: 22px;
 }
+
+
 
 /*======== HOME ========*/
 
