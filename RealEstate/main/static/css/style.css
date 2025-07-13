@@ -4,6 +4,7 @@
     --text-color: black;
     --card-bg: white;
     --pill-shadow: rgba(0, 0, 0, 0.15);
+    --card-bgg: rgba(222, 222, 222, 0.649);
   }
   
   /* Dark Theme */
@@ -12,6 +13,7 @@
     --text-color: #ffffff;
     --card-bg: #2c2c2c;
     --pill-shadow: rgba(255, 255, 255, 0.1);
+    --card-bgg: rgba(48, 48, 48, 0.44);
   }
 
 
@@ -65,7 +67,7 @@
 }
 
 .logo:hover {
-  transform: scale(1.2); /* Zoom in slightly */
+  transform: scale(1.2); 
 }
 
 
@@ -102,12 +104,10 @@
 
 .navbar a:hover {
     color: #e33131;
-    transform: scale(1.2); /* Zoom in slightly */
+    transform: scale(1.3); 
 }
 
-.navbar:hover {
-  transform: translateY(-10px);
-}
+
 
 .right-section.redesigned {
     display: flex;
@@ -169,17 +169,10 @@
     cursor: pointer;
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #f1f1f1;
-    margin-top: 60px;
-}
-
 .footer-pills {
     position: fixed;
     bottom: 40px;
-    left: 49%;
+    left: 48.5%;
     transform: translateX(-50%);
     z-index: 1000;
     width: auto;
@@ -188,22 +181,26 @@ footer {
     align-items: center;
     background-color: transparent;
     padding: 0;
+    opacity: 0;
+    animation: fadeInFooter 0.2s ease-in forwards;
+    animation-delay: 0.1s;
 }
 
 
 .pill-footer-container {
     background-color: var(--bg-color);
     border-radius: 90px;
-    padding: 18px 130px;
+    padding: 12px 130px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     display: flex;
     gap: 130px;
     align-items: center;
     pointer-events: auto;
+    overflow: hidden;
 }
 
-.pill-item :hover {
-  transform: scale(1.2);
+.pill-icon :hover {
+  transform: scale(1.4);
 }
 
 .pill-item {
@@ -221,6 +218,26 @@ footer {
     font-size: 20px;
     color: white;
     transition: transform 0.2s ease-in-out;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: slideIn 0.4s ease forwards;
+}
+
+.pill-item:nth-child(1) .pill-icon { animation-delay: 0.1s; }
+.pill-item:nth-child(2) .pill-icon { animation-delay: 0.3s; }
+.pill-item:nth-child(3) .pill-icon { animation-delay: 0.5s; }
+.pill-item:nth-child(4) .pill-icon { animation-delay: 0.7s; }
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInFooter {
+  to {
+    opacity: 1;
+  }
 }
 
 .pill-label {
@@ -230,8 +247,8 @@ footer {
 }
 
 .pill-icon img {
-    width: 22px;
-    height: 22px;
+    width: 25px;
+    height: 25px;
 }
 
 
@@ -301,10 +318,9 @@ html[data-theme='dark'] .hero-section {
 /*======== Property ========*/
 
 /*======== properties section ========*/
-
 .properties-section {
-    padding: 250px 5%;
-    background-color: #e3dfdba7;
+    padding: 190px 9%;
+    background-color: var(--card-bgg);
 }
 
 .properties-section h2 {
@@ -321,7 +337,7 @@ html[data-theme='dark'] .hero-section {
 
 
 .property-card {
-    background-color: rgba(172, 172, 172, 0.203);
+    background-color: rgba(186, 186, 186, 0.756);
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 8px 16px rgba(0,0,0,0.1);
@@ -331,7 +347,7 @@ html[data-theme='dark'] .hero-section {
 
 .property-card img {
     width: 100%;
-    height: 200px;
+    height: 260px;
     object-fit: cover;
 }
 
@@ -343,7 +359,7 @@ html[data-theme='dark'] .hero-section {
 }
 
 .card-details h3 {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: bold;
     margin: 0;
 }
@@ -392,7 +408,7 @@ html[data-theme='dark'] .contact-hero {
 }
 
 .contact-left h1 {
-    font-size: 35px;
+    font-size: 38px;
     margin-top: -180px;
     margin-left: 100px;
     font-weight: normal;
