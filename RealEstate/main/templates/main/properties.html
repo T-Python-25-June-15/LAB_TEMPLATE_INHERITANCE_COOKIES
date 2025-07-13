@@ -1,0 +1,16 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %} properties {% endblock %}
+{% block content %}
+<p class="prp-big-title"> OUR PROPERTIES </p>
+<ul class="properties-grid">
+    {% for prp in properties %}
+        <li class="img-title-btn">
+            <img src="{% static 'images/' %}{{prp.image}}">
+            <h3 class="prp-title"> {{prp.title}} </h3>
+            <button class="prp-btn">more</button>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %} Home page {% endblock %}
+
+
+{% block class %} 
+    background-main-home-img
+{% endblock %}
+
+
+{% block content %}
+<section class="find-your-dreams">
+    <h2>FIND YOUR DREAMS</h2>
+    <p>Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties. Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties.</p>
+    <a href="{% url 'main:properties_view' %}" class="button-style">Properties</a>
+</section>
+    
+<div class="container">
+    <section class="icons-all">
+        <a href="#">
+            <svg id= "icon-all"xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#48752C"><path d="M160-120v-375l-72 55-48-64 120-92v-124h80v63l240-183 440 336-48 63-72-54v375H160Zm80-80h200v-160h80v160h200v-356L480-739 240-556v356Zm-80-560q0-50 35-85t85-35q17 0 28.5-11.5T320-920h80q0 50-35 85t-85 35q-17 0-28.5 11.5T240-760h-80Zm80 560h480-480Z"/></svg>        </a>
+        <a href="{% url 'main:properties_view' %}">
+            <svg id="icon-prp"xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#bd801d"><path d="M120-120v-560h160v-160h400v320h160v400H520v-160h-80v160H120Zm80-80h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm160 160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm160 320h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm160 480h80v-80h-80v80Zm0-160h80v-80h-80v80Z"/></svg>        </a>
+        <a href="#">
+            <svg id= "icon_hotel" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ff00c8"><path d="M360-400v-280h360q66 0 113 47t47 113v120H360Zm80-200v120-120ZM80-280v-80h800v80H80Zm120-120q-50 0-85-35t-35-85q0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35Zm0-80q17 0 28.5-11.5T240-520q0-17-11.5-28.5T200-560q-17 0-28.5 11.5T160-520q0 17 11.5 28.5T200-480Zm240 0h360v-40q0-33-23.5-56.5T720-600H440v120Zm-240-40Z"/></svg>        </a>
+        <a href="#">
+            <svg id="icon-villa" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#8C1AF6"><path d="M120-120v-520l520-200v360h40q0-33 23.5-56.5T760-560q33 0 56.5 23.5T840-480v360H120Zm80-80h160v-280h200v-244L200-585v385Zm240 0h120v-120h80v120h120v-200H440v200ZM280-560Zm320 360Zm0-20Z"/></svg>
+        </a>
+    </section>
+    <section class="icons-title">
+        <a style="color: #48752C;">ALL</a>
+        <a href="{% url 'main:properties_view' %}" style="color: #bd801d;">PROPERTIES</a>
+        <a style="color: #ff00c8;">HOTEL</a>
+        <a style="color: #8C1AF6;">VILLA</a>
+    </section>
+</div>
+{% endblock %}
