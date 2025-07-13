@@ -21,17 +21,28 @@ def contact_view(request: HttpRequest):
 
     return render(request, "main/contact.html")
 
+def mode_view(request:HttpRequest, mode):
+    response = redirect(request.GET.get("next", "/"))
 
-def dark_mode_view(request: HttpRequest ):
-    response = redirect("main:home_view")
-    response.set_cookie("mode", "dark", max_age=60*68*24)
-    # response.set_signed_cookie("mood", "dark", )
-
+    if mode== "light":
+        response.set_cookie("mode", "light", max_age=-3600)
+    elif mode == "dark":
+        response.set_cookie("mode", "dark", max_age=60*68*24)
+    
     return response
 
-def light_mode_view(request: HttpRequest ):
-    response = redirect("main:home_view")
-    response.set_cookie("mode", "light", max_age=-3600)
-    # response.set_signed_cookie("mood", "light",  )
 
-    return response
+
+# def dark_mode_view(request: HttpRequest ):
+#     response = redirect("main:home_view")
+#     response.set_cookie("mode", "dark", max_age=60*68*24)
+#     # response.set_signed_cookie("mood", "dark", )
+
+#     return response
+
+# def light_mode_view(request: HttpRequest ):
+#     response = redirect("main:home_view")
+#     response.set_cookie("mode", "light", max_age=-3600)
+#     # response.set_signed_cookie("mood", "light",  )
+
+#     return response

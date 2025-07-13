@@ -29,8 +29,8 @@
 
             <div class="right-nav">
                 <a href="" class="signup-link"><span class="material-symbols-outlined">account_circle</span>Sign up</a>
-                <a href="{% url 'main:light_mode_view' %}"><span class="material-symbols-outlined lighticon {% if not 'mode' in request.COOKIES %}active-icon{% endif %}">clear_day</span></a>
-                <a href="{% url 'main:dark_mode_view' %}"><span class="material-symbols-outlined darkicon {% if 'mode' in request.COOKIES %}active-icon{% endif %}">bedtime</span></a>
+                <a href="{% url 'main:mode_view' 'light' %}?next={{request.path}}"><span class="material-symbols-outlined lighticon {% if not 'mode' in request.COOKIES %}active-icon{% endif %}">clear_day</span></a>
+                <a href="{% url 'main:mode_view' 'dark' %}?next={{request.path}}"><span class="material-symbols-outlined darkicon {% if 'mode' in request.COOKIES %}active-icon{% endif %}">bedtime</span></a>
 
             </div>
             
