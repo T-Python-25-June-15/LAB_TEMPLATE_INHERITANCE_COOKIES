@@ -1,0 +1,48 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Home - Page
+{% endblock %}
+{% block body_class %}home-page{% endblock %}
+{% block content %}
+<div class="home-page">
+
+  <div class="container">
+    <h1 class="fn">FIND YOUR <br> DREAMS</h1>
+    <p class="index-p">
+      <br>
+      Our catalog will surprise you. Discover an unprecedented offer of luxury properties.
+      Our <br>catalog will surprise you again with new options.
+      <br><br><br>
+    </p>
+    <div class="explore-btn">
+     <a href="{% url 'main:properties_page' %}">
+       <button class="btn">
+         <p class="explore">Explore Properties</p>
+       </button>
+     </a>
+    </div>
+
+  </div>
+
+  <div class="content-container">
+    <div class="content">
+      <span class="material-symbols-outlined icon-green">home</span>
+      <h4 class="all">ALL</h4>
+    </div>
+    <div class="content">
+      <span class="material-symbols-outlined icon-orange">factory</span>
+      <h4 class="properties">PROPERTIES</h4>
+    </div>
+    <div class="content">
+      <span class="material-symbols-outlined icon-purple">hotel</span>
+      <h4 class="hotel">HOTEL</h4>
+    </div>
+    <div class="content">
+      <span class="material-symbols-outlined icon-blue">villa</span>
+      <h4 class="villa">VILLA</h4>
+    </div>
+  </div>
+
+</div>
+{% endblock %}
