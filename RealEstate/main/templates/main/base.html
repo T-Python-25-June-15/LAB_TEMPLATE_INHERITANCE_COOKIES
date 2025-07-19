@@ -1,48 +1,51 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{% block title %} {% endblock %}</title>
-    {% if theme == 'dark' %}
-    <link rel="stylesheet" href="/static/css/dark_style.css">
-    {% else %}
-    <link rel="stylesheet" href="/static/css/style.css">
-    {% endif %}
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />   
-</head>
-<body>
+  <title>{% block title %}{% endblock %}</title>
 
- <div class="Wrapper">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  {% block extra_head %}{% endblock %}
+</head>
+<body class="{% if theme == 'dark' %}dark{% endif %} {% block body_class %}{% endblock %}">
+
+  <div class="Wrapper">
     <nav>
       <h1 class="logo"><strong>HOME</strong></h1>
       <div class="center_nav">
-        <a href="/">Home</a>
-        <a href="/properties">Properties</a>
+        <a href="{% url 'main:home_page' %}">Home</a>
+        <a href="{% url 'main:properties_page' %}">Properties</a>
         <a href="#">Services</a>
         <a href="#">About</a>
-        <a href="/contact">Contact</a>
+        <a href="{% url 'main:contact_page' %}">Contact</a>
       </div>
       <div class="sign_up">
-       <i class="material-icons">person</i> 
-       Sign up
-        <a href="/theme/light/"><span class="material-symbols-outlined">wb_sunny</span></a>
-        <a href="/theme/dark/"><span class="material-symbols-outlined">bedtime</span></a>
+        <i class="material-icons">person</i> 
+        Sign up
+        <a href="{% url 'main:light' %}" class="sunny {% if theme != 'dark' %}active-mode{% endif %}">
+          <span class="material-symbols-outlined">wb_sunny</span>
+        </a>
+        <a href="{% url 'main:dark' %}" class="dark {% if theme == 'dark' %}active-mode{% endif %}">
+          <span class="material-symbols-outlined">bedtime</span>
+        </a>
       </div>
     </nav>
- </div>
+  </div>
   
-    <main>
-         {%block content%}
+  <main>
+    {% block content %}
+    {% endblock %}
+  </main>
     
-         {%endblock%}
-    </main>
-    
-    <footer>
-      <p>2025 Nasser Alsuduni. All rights reserved.</p>
-    </footer>
+  <footer>
+    <p>2025 Nasser Alsuduni. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
-

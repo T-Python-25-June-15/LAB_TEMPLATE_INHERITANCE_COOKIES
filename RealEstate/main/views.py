@@ -4,7 +4,7 @@ from django.http import HttpRequest, HttpResponse
 
 def home_page(request:HttpRequest):
     theme = request.COOKIES.get("theme", "light")
-    return render(request , "main/index.html", {"theme": theme})
+    return render(request , "main/index.html", {"theme": theme ,"body_class": "home-page"})
 
 def properties_page(request:HttpRequest):
     properties = [

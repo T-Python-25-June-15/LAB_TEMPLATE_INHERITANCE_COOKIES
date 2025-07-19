@@ -1,30 +1,26 @@
-{% extends 'main/base.html'%}
+{% extends 'main/base.html' %}
+{% load static %}
+
 {% block title %}
 Properties - Page
 {% endblock %}
 
-{% block content %}
-<body class="properties_page">
-<div class="properties_container">
-  <h2>our properties</h2>
+{% block body_class %}properties_page{% endblock %}
 
+{% block content %}
+<div class="properties_container">
+  <h2 class="our-properties">Our Properties</h2>
 
   <div class="card_container">
-
-
     {% for property in properties %}
     <div class="card">
-      <img src="/static/images/{{property.image}}" alt="">
-      <h2>{{property.title}}</h2>
+      <img src="{% static 'images/' %}{{ property.image }}" alt="{{ property.title }}">
+      <h2>{{ property.title }}</h2>
       <div class="card-footer">
         <button class="btn2"><span>More</span></button>
       </div>
     </div>
-    {%endfor%}
-    
-   </div>
-</div> 
-</body>
-
-
+    {% endfor %}
+  </div>
+</div>
 {% endblock %}
